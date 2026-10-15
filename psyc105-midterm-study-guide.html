@@ -1,0 +1,1177 @@
+<title>PSYC 105 Midterm Guide</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&display=swap">
+<style>
+/* Layout: one reading column styled like an exam booklet — form-field header, chapter sections, then a Scantron-style practice block */
+:root {
+  --paper: #f4f7f6;
+  --surface: #ffffff;
+  --ink: #1b2327;
+  --muted: #56636a;
+  --line: #d3ddda;
+  --accent: #1d7552;        /* Scantron green */
+  --accent-ink: #ffffff;
+  --accent-soft: #e0efe8;
+  --mark: #fdeb8a;          /* highlighter */
+  --mark-ink: #1b2327;
+  --good: #1d7552;
+  --good-soft: #e0efe8;
+  --bad: #b02a22;
+  --bad-soft: #f9e4e2;
+  --c1: #2c64a8;  /* verbal / stimulus */
+  --c2: #a8562c;  /* perceptual / response */
+  --c3: #6b4aa8;  /* working memory / transaction */
+  --c4: #1d7552;  /* processing speed */
+  --c1-soft: #e3ecf7; --c2-soft: #f6e8e0; --c3-soft: #ece6f6; --c4-soft: #e0efe8;
+  --shadow: 0 1px 2px rgba(20, 40, 35, .06), 0 4px 14px rgba(20, 40, 35, .06);
+  --font-display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #111718; --surface: #182022; --ink: #e4ebe9; --muted: #98a6a8; --line: #2a3537;
+    --accent: #5cc49a; --accent-ink: #0b1512; --accent-soft: #173229;
+    --mark: #5b5120; --mark-ink: #fff5c4;
+    --good: #5cc49a; --good-soft: #173229; --bad: #f08a80; --bad-soft: #3a1d1b;
+    --c1: #7fb0ec; --c2: #e59a72; --c3: #b39ae8; --c4: #5cc49a;
+    --c1-soft: #1a2a3e; --c2-soft: #352419; --c3-soft: #281f3d; --c4-soft: #173229;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 4px 14px rgba(0,0,0,.25);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #111718; --surface: #182022; --ink: #e4ebe9; --muted: #98a6a8; --line: #2a3537;
+  --accent: #5cc49a; --accent-ink: #0b1512; --accent-soft: #173229;
+  --mark: #5b5120; --mark-ink: #fff5c4;
+  --good: #5cc49a; --good-soft: #173229; --bad: #f08a80; --bad-soft: #3a1d1b;
+  --c1: #7fb0ec; --c2: #e59a72; --c3: #b39ae8; --c4: #5cc49a;
+  --c1-soft: #1a2a3e; --c2-soft: #352419; --c3-soft: #281f3d; --c4-soft: #173229;
+  --shadow: 0 1px 2px rgba(0,0,0,.3), 0 4px 14px rgba(0,0,0,.25);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 64px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  background: var(--paper); color: var(--ink);
+  font-family: var(--font-body); font-size: 17px; line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap {
+  max-width: 980px; margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.15; margin: 0; text-wrap: balance; }
+h1 { font-size: clamp(2rem, 6vw, 3.4rem); font-weight: 800; font-stretch: 112%; letter-spacing: -.01em; }
+h2 { font-size: clamp(1.6rem, 4vw, 2.2rem); font-weight: 750; font-stretch: 110%; }
+h3 { font-size: 1.25rem; font-weight: 700; font-stretch: 105%; }
+h4 { font-size: 1rem; font-weight: 700; }
+p { margin: 0; max-width: 68ch; }
+ul, ol { margin: 0; padding-left: 1.25em; max-width: 66ch; }
+li + li { margin-top: .3em; }
+a { color: var(--accent); }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+mark { background: linear-gradient(transparent 12%, var(--mark) 12%, var(--mark) 88%, transparent 88%); color: var(--mark-ink); padding: 0 .15em; }
+.eyebrow { font-family: var(--font-mono); font-size: .75rem; letter-spacing: .09em; text-transform: uppercase; color: var(--muted); }
+.muted { color: var(--muted); }
+.stack { display: flex; flex-direction: column; gap: 16px; }
+.stack-lg { display: flex; flex-direction: column; gap: 32px; }
+.grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 16px; }
+.grid-2 > * { min-width: 0; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 20px; box-shadow: var(--shadow); }
+.note { border-left: 3px solid var(--accent); padding: 4px 0 4px 14px; color: var(--ink); }
+.ui { font-family: var(--font-display); }
+button {
+  font-family: var(--font-display); font-size: .95rem; font-weight: 600;
+  border-radius: 8px; border: 1px solid var(--line); background: var(--surface); color: var(--ink);
+  padding: 8px 14px; cursor: pointer; min-height: 40px;
+}
+button:hover { border-color: var(--accent); }
+button.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+button[aria-pressed="true"] { background: var(--accent-soft); border-color: var(--accent); color: var(--ink); }
+.btn-row { display: flex; flex-wrap: wrap; gap: 8px; }
+
+/* Header */
+header.top { padding-block: 40px 28px; }
+header.top .stack { gap: 14px; }
+.lede { font-size: 1.1rem; color: var(--muted); }
+.form-strip {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  border: 1.5px solid var(--ink); border-radius: 6px; overflow: hidden; background: var(--surface);
+}
+.field { padding: 10px 14px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); min-width: 0; }
+.field .eyebrow { font-size: .68rem; }
+.field strong { display: block; font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+.field span.sub { font-family: var(--font-display); font-size: .85rem; color: var(--muted); }
+
+/* Nav */
+nav.toc {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10;
+  background: var(--paper); border-bottom: 1px solid var(--line);
+}
+.toc-scroll { overflow-x: auto; scrollbar-width: none; }
+.toc-scroll::-webkit-scrollbar { display: none; }
+.toc ul { list-style: none; display: flex; gap: 6px; padding: 10px 0; margin: 0; max-width: none; white-space: nowrap; }
+.toc li + li { margin-top: 0; }
+.toc a {
+  display: inline-block; font-family: var(--font-display); font-size: .88rem; font-weight: 600;
+  text-decoration: none; color: var(--ink); padding: 6px 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface);
+}
+.toc a:hover { border-color: var(--accent); color: var(--accent); }
+
+section.chapter { padding-block: 48px; border-bottom: 1px solid var(--line); }
+.section-head { display: flex; flex-direction: column; gap: 8px; margin-bottom: 28px; }
+.sub-head { display: flex; flex-direction: column; gap: 6px; }
+
+/* Language */
+.feature-table { width: 100%; border-collapse: collapse; font-size: 1rem; }
+.table-scroll { overflow-x: auto; }
+.feature-table th, .feature-table td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.feature-table th { font-family: var(--font-mono); font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+.feature-table td:first-child { font-family: var(--font-display); font-weight: 700; white-space: nowrap; }
+.breakdown { display: flex; flex-direction: column; gap: 14px; }
+.word-display { font-family: var(--font-display); font-size: clamp(1.8rem, 7vw, 2.6rem); font-weight: 700; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; min-height: 64px; }
+.chip { display: inline-flex; align-items: center; padding: 2px 12px; border-radius: 8px; border: 1.5px solid; }
+.chip.ph { border-color: var(--c2); background: var(--c2-soft); color: var(--ink); }
+.chip.mo { border-color: var(--c1); background: var(--c1-soft); color: var(--ink); }
+.count { font-family: var(--font-mono); font-size: .85rem; color: var(--muted); }
+.props { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 12px; }
+.prop { padding: 14px 16px; border-radius: 10px; background: var(--surface); border: 1px solid var(--line); }
+.prop h4 { margin-bottom: 4px; }
+.prop p { font-size: .95rem; }
+
+/* WAIS */
+.wais { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+@media (max-width: 560px) { .wais { grid-template-columns: 1fr; } }
+.quad { border-radius: 12px; padding: 16px 18px; border: 1.5px solid; }
+.quad h4 { font-size: 1.05rem; margin-bottom: 8px; }
+.quad ul { list-style: none; padding: 0; font-size: .95rem; }
+.quad li b { font-family: var(--font-display); }
+.q-verbal { border-color: var(--c1); background: var(--c1-soft); }
+.q-percep { border-color: var(--c2); background: var(--c2-soft); }
+.q-wm { border-color: var(--c3); background: var(--c3-soft); }
+.q-speed { border-color: var(--c4); background: var(--c4-soft); }
+.quad.hide-subtests li span.desc, .quad.hide-subtests li b { filter: blur(6px); user-select: none; }
+.activity-table td:nth-child(3) { font-family: var(--font-display); }
+.flag { display: inline-block; font-family: var(--font-mono); font-size: .72rem; letter-spacing: .05em; text-transform: uppercase; padding: 2px 8px; border-radius: 999px; background: var(--bad-soft); color: var(--bad); border: 1px solid var(--bad); }
+
+/* Stress */
+.approaches { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 14px; }
+.approach { border-top: 5px solid; border-radius: 10px; background: var(--surface); padding: 16px 18px; border-left: 1px solid var(--line); border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); display: flex; flex-direction: column; gap: 10px; }
+.approach.a1 { border-top-color: var(--c1); }
+.approach.a2 { border-top-color: var(--c2); }
+.approach.a3 { border-top-color: var(--c3); }
+.approach .label { font-family: var(--font-mono); font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.approach .issue { background: var(--bad-soft); border-radius: 8px; padding: 10px 12px; font-size: .93rem; }
+.approach .issue b { color: var(--bad); font-family: var(--font-display); }
+.equation { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.15rem, 4vw, 1.6rem); display: flex; flex-wrap: wrap; gap: 8px; align-items: baseline; }
+.equation .s { color: var(--c2); } .equation .ap { color: var(--c1); }
+
+.seesaw-card { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 24px; align-items: center; }
+@media (max-width: 680px) { .seesaw-card { grid-template-columns: 1fr; } }
+.seesaw { position: relative; height: 190px; max-width: 100%; }
+.beam {
+  position: absolute; left: 6%; right: 6%; top: 110px; height: 8px; border-radius: 4px; background: var(--ink);
+  transform-origin: 50% 50%; transition: transform .45s cubic-bezier(.3,1.4,.5,1);
+}
+@media (prefers-reduced-motion: reduce) { .beam { transition: none; } }
+.pan { position: absolute; bottom: 10px; width: 34%; display: flex; flex-wrap: wrap-reverse; gap: 3px; justify-content: center; align-content: flex-start; }
+.pan.l { left: 0; } .pan.r { right: 0; }
+.blk { width: 16px; height: 16px; border-radius: 3px; }
+.pan.l .blk { background: var(--bad); }
+.pan.r .blk { background: var(--good); }
+.pan-label { position: absolute; top: 14px; font-family: var(--font-mono); font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); width: 34%; text-align: center; }
+.pan-label.l { left: 0; } .pan-label.r { right: 0; }
+.fulcrum { position: absolute; left: 50%; top: 118px; width: 0; height: 0; transform: translateX(-50%); border-left: 22px solid transparent; border-right: 22px solid transparent; border-bottom: 44px solid var(--muted); }
+.ground { position: absolute; left: 20%; right: 20%; top: 164px; height: 2px; background: var(--line); }
+.slider { display: flex; flex-direction: column; gap: 4px; }
+.slider label { font-family: var(--font-display); font-weight: 600; display: flex; justify-content: space-between; }
+.slider output { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+input[type="range"] { width: 100%; accent-color: var(--accent); }
+.readout { border-radius: 8px; padding: 12px 14px; font-family: var(--font-display); font-weight: 600; }
+.readout.ok { background: var(--good-soft); color: var(--good); }
+.readout.bad { background: var(--bad-soft); color: var(--bad); }
+.readout.none { background: var(--accent-soft); color: var(--ink); }
+
+.flow { display: grid; grid-template-columns: auto minmax(0,1fr); gap: 0 14px; }
+.flow .dot { width: 30px; height: 30px; border-radius: 50%; background: var(--accent); color: var(--accent-ink); display: grid; place-items: center; font-family: var(--font-display); font-weight: 700; font-size: .9rem; }
+.flow .line { width: 2px; background: var(--line); margin: 4px auto; min-height: 16px; }
+.flow .step { padding-bottom: 18px; }
+.flow .step h4 { margin-top: 4px; }
+
+.coping { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); gap: 12px; }
+.cope { border-radius: 10px; padding: 14px 16px; background: var(--surface); border: 1px solid var(--line); }
+.cope .tag { font-family: var(--font-mono); font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; }
+.cope h4 { font-size: 1.05rem; margin: 2px 0 6px; }
+.t-problem { color: var(--c1); } .t-emotion { color: var(--c2); } .t-proactive { color: var(--c3); }
+
+.sorter { display: flex; flex-direction: column; gap: 10px; }
+.sort-item { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px 14px; align-items: center; padding: 12px 14px; border-radius: 10px; background: var(--surface); border: 1px solid var(--line); }
+@media (max-width: 600px) { .sort-item { grid-template-columns: 1fr; } }
+.sort-item .btn-row button { padding: 6px 10px; min-height: 36px; font-size: .85rem; }
+.sort-item .fb { grid-column: 1 / -1; font-size: .93rem; }
+.sort-item.right { border-color: var(--good); }
+.sort-item.wrong { border-color: var(--bad); }
+.fb.right { color: var(--good); } .fb.wrong { color: var(--bad); }
+
+details.reveal { border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
+details.reveal > summary { cursor: pointer; padding: 12px 16px; font-family: var(--font-display); font-weight: 650; list-style: none; display: flex; justify-content: space-between; gap: 12px; }
+details.reveal > summary::-webkit-details-marker { display: none; }
+details.reveal > summary::after { content: "Show"; font-family: var(--font-mono); font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); align-self: center; }
+details.reveal[open] > summary::after { content: "Hide"; }
+details.reveal .body { padding: 0 16px 16px; display: flex; flex-direction: column; gap: 10px; }
+
+.scenario { display: flex; flex-direction: column; gap: 10px; }
+.pill { display: inline-block; font-family: var(--font-mono); font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; padding: 2px 9px; border-radius: 999px; border: 1px solid var(--line); }
+.pill.p { color: var(--c1); border-color: var(--c1); }
+.pill.e { color: var(--c2); border-color: var(--c2); }
+.pill.x { color: var(--c3); border-color: var(--c3); }
+.strategies { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.strategies li { display: flex; gap: 10px; align-items: baseline; }
+.strategies li + li { margin-top: 0; }
+
+.breath { display: grid; grid-template-columns: auto minmax(0,1fr); gap: 24px; align-items: center; }
+@media (max-width: 560px) { .breath { grid-template-columns: 1fr; justify-items: center; } }
+.breath-ring { width: 160px; height: 160px; border-radius: 50%; border: 2px dashed var(--line); display: grid; place-items: center; }
+.breath-ball { width: 150px; height: 150px; border-radius: 50%; background: var(--accent-soft); border: 3px solid var(--accent); display: grid; place-items: center; transform: scale(.55); transition-property: transform; transition-timing-function: ease-in-out; }
+.breath-ball span { font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; text-align: center; line-height: 1.2; }
+@media (prefers-reduced-motion: reduce) { .breath-ball { transition: none !important; transform: none !important; } }
+
+/* Practice */
+.practice-bar { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between; padding: 12px 16px; background: var(--surface); border: 1.5px solid var(--ink); border-radius: 8px; position: sticky; top: calc(env(safe-area-inset-top, 0px) + 52px); z-index: 5; }
+.score { font-family: var(--font-mono); font-variant-numeric: tabular-nums; font-size: .95rem; }
+.mcq { display: flex; flex-direction: column; gap: 12px; padding: 18px 0; border-bottom: 1px dashed var(--line); }
+.mcq .qtext { display: grid; grid-template-columns: 2.2em minmax(0,1fr); gap: 4px; }
+.mcq .qnum { font-family: var(--font-mono); font-weight: 500; color: var(--muted); font-variant-numeric: tabular-nums; }
+.opts { display: flex; flex-direction: column; gap: 6px; padding-left: 2.2em; }
+.opt { display: grid; grid-template-columns: 34px minmax(0,1fr); gap: 10px; align-items: center; text-align: left; font-family: var(--font-body); font-weight: 400; font-size: 1rem; background: transparent; border: 1px solid transparent; padding: 6px 10px 6px 4px; min-height: 0; }
+.opt:hover:not(:disabled) { border-color: var(--line); background: var(--surface); }
+.opt:disabled { cursor: default; color: var(--ink); }
+.bubble { width: 28px; height: 28px; border-radius: 50%; border: 1.5px solid var(--accent); color: var(--accent); display: grid; place-items: center; font-family: var(--font-mono); font-size: .8rem; font-weight: 500; }
+.opt.chosen .bubble { background: var(--ink); border-color: var(--ink); color: var(--paper); }
+.opt.correct { background: var(--good-soft); border-color: var(--good); }
+.opt.correct .bubble { background: var(--good); border-color: var(--good); color: var(--accent-ink); }
+.opt.incorrect { background: var(--bad-soft); border-color: var(--bad); }
+.opt.incorrect .bubble { background: var(--bad); border-color: var(--bad); color: var(--surface); }
+.why { padding-left: 2.2em; font-size: .95rem; }
+.why b { font-family: var(--font-display); }
+
+.sa { display: flex; flex-direction: column; gap: 10px; }
+.marks { font-family: var(--font-mono); font-size: .8rem; color: var(--accent); letter-spacing: .04em; }
+.key-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.key-list li + li { margin-top: 0; }
+.key-list li { display: grid; grid-template-columns: 4.2em minmax(0,1fr); gap: 8px; }
+.key-list .pts { font-family: var(--font-mono); font-size: .8rem; color: var(--accent); padding-top: .2em; font-variant-numeric: tabular-nums; }
+.scatter { max-width: 320px; width: 100%; height: auto; }
+
+/* Flashcards */
+.flash-wrap { display: flex; flex-direction: column; gap: 14px; align-items: stretch; }
+.flash {
+  min-height: 220px; border-radius: 14px; border: 1.5px solid var(--ink); background: var(--surface);
+  display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; gap: 10px;
+  padding: 28px 24px; cursor: pointer; font-family: var(--font-body); font-weight: 400; box-shadow: var(--shadow); width: 100%;
+}
+.flash .side { font-family: var(--font-mono); font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.flash .term { font-family: var(--font-display); font-size: clamp(1.5rem, 5vw, 2.2rem); font-weight: 750; font-stretch: 108%; }
+.flash .def { font-size: 1.1rem; max-width: 52ch; }
+.flash.back { background: var(--accent-soft); border-color: var(--accent); }
+.flash-nav { display: flex; flex-wrap: wrap; gap: 8px; justify-content: space-between; align-items: center; }
+.flash-count { font-family: var(--font-mono); font-variant-numeric: tabular-nums; color: var(--muted); }
+
+.tips { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 16px; }
+.check { list-style: none; padding: 0; }
+.check li { padding-left: 1.6em; position: relative; }
+.check li::before { content: ""; position: absolute; left: 0; top: .35em; width: .95em; height: .95em; border-radius: 50%; border: 1.5px solid var(--accent); }
+footer { padding-block: 32px 48px; color: var(--muted); font-size: .9rem; }
+</style>
+
+<header class="top">
+  <div class="wrap stack">
+    <div class="eyebrow">PSYC 105 · Section GS04 · Fall 2026</div>
+    <h1>Midterm Study Guide</h1>
+    <p class="lede">Notes, interactive review and practice questions built from the Chapter 8 (Thinking, Language &amp; Intelligence), Chapter 11 (Stress &amp; Coping) and Midterm Review class slides.</p>
+    <div class="form-strip" role="list" aria-label="Midterm details">
+      <div class="field" role="listitem"><div class="eyebrow">Date</div><strong>Oct 15</strong><span class="sub">in class</span></div>
+      <div class="field" role="listitem"><div class="eyebrow">Time</div><strong>80 min</strong><span class="sub">arrive on time</span></div>
+      <div class="field" role="listitem"><div class="eyebrow">Multiple choice</div><strong>30 × 1</strong><span class="sub">Scantron</span></div>
+      <div class="field" role="listitem"><div class="eyebrow">Short answer</div><strong>3 of 4</strong><span class="sub">5 marks each</span></div>
+      <div class="field" role="listitem"><div class="eyebrow">Total</div><strong>45</strong><span class="sub">30 MC + 15 SA</span></div>
+    </div>
+    <p class="note"><b class="ui">Bring:</b> student ID, pen, pencil, and your cheat sheet (one 8.5×11″ page, front and back, no attachments, <mark>student ID # written on it</mark>). Fill Scantron circles in <b>completely</b>, with no checkmarks or Xs. The official course study guide decides what's tested: if it's not on that guide, it won't be on the midterm.</p>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Sections">
+  <div class="wrap toc-scroll">
+    <ul>
+      <li><a href="#language">Language</a></li>
+      <li><a href="#intelligence">Intelligence</a></li>
+      <li><a href="#stress">Measuring stress</a></li>
+      <li><a href="#coping">Appraisal &amp; coping</a></li>
+      <li><a href="#quiz">Practice MC</a></li>
+      <li><a href="#short">Short answers</a></li>
+      <li><a href="#cards">Flashcards</a></li>
+      <li><a href="#cheat">Cheat sheet</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+<!-- ============ CH 8: LANGUAGE ============ -->
+<section class="chapter" id="language">
+  <div class="wrap stack-lg">
+    <div class="section-head">
+      <div class="eyebrow">Chapter 8 · Thinking and Language</div>
+      <h2>What is special about language?</h2>
+      <p>Language has <b>structural features</b> (the building blocks) and <b>properties</b> (what makes it different from other communication).</p>
+    </div>
+
+    <div class="stack">
+      <h3>Structural features</h3>
+      <div class="card table-scroll">
+        <table class="feature-table">
+          <thead><tr><th>Feature</th><th>What it is</th><th>Example</th></tr></thead>
+          <tbody>
+            <tr><td>Phonemes</td><td>The smallest units of <b>sound</b> in a language</td><td>/ch/ /ai/ /r/ /s/</td></tr>
+            <tr><td>Morphemes</td><td>The smallest units of <b>meaning</b> (whole words, prefixes, suffixes)</td><td>(chair)(s): “chair” + plural “-s”</td></tr>
+            <tr><td>Syntax</td><td>The <b>rules for ordering</b> words into sentences</td><td>“Dog bites man” vs. “Man bites dog”</td></tr>
+            <tr><td>Extralinguistic information</td><td>Meaning that comes from <b>outside the words</b>: tone of voice, facial expression, gestures, context</td><td>“Great job…” said sarcastically</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card breakdown">
+      <div class="sub-head">
+        <div class="eyebrow">Try it</div>
+        <h3>Break a word into phonemes and morphemes</h3>
+        <p class="muted">Phonemes count <i>sounds</i>, not letters. Morphemes count <i>meaningful pieces</i>.</p>
+      </div>
+      <div class="btn-row" role="group" aria-label="Choose a word">
+        <button type="button" id="w-chairs" data-word="chairs" aria-pressed="true">chairs</button>
+        <button type="button" id="w-cats" data-word="cats" aria-pressed="false">cats</button>
+        <button type="button" id="w-unlocked" data-word="unlocked" aria-pressed="false">unlocked</button>
+      </div>
+      <div class="btn-row" role="group" aria-label="Choose a view">
+        <button type="button" id="v-ph" data-view="ph" aria-pressed="true">Phonemes (sound)</button>
+        <button type="button" id="v-mo" data-view="mo" aria-pressed="false">Morphemes (meaning)</button>
+      </div>
+      <div class="word-display" id="word-display" aria-live="polite"></div>
+      <div class="count" id="word-note"></div>
+    </div>
+
+    <div class="stack">
+      <h3>Properties of language</h3>
+      <div class="props">
+        <div class="prop"><h4>Generative</h4><p>A limited set of sounds and words can be combined into an <b>unlimited</b> number of new sentences that others understand.</p></div>
+        <div class="prop"><h4>Arbitrary / symbolic</h4><p>Words are <b>symbols</b>. “Cat” doesn't sound or look like a cat; the link between word and meaning is agreed on, not natural.</p></div>
+        <div class="prop"><h4>Specialized brain areas</h4><p>Language relies on dedicated regions, usually in the left hemisphere (e.g., Broca's area for producing speech, Wernicke's area for understanding it).</p></div>
+        <div class="prop"><h4>Developmental stages</h4><p>Children acquire language in a predictable sequence. Deaf babies show <b>manual babbling</b> (repetitive hand shapes, around 9 months), just as hearing babies babble sounds.</p></div>
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <div class="card stack">
+        <div class="eyebrow">Class activity · gesture game</div>
+        <h3>Why was guessing the signed sentences so hard?</h3>
+        <p>We made up gestures and tried to guess each other's sentences. It was difficult because it's hard to invent a sign for many words, and <mark>we don't already know the correct ASL sign</mark> for each word.</p>
+      </div>
+      <div class="card stack">
+        <div class="eyebrow">Key takeaway</div>
+        <h3>True sign languages are real languages</h3>
+        <ul>
+          <li>They have the <b>same structural features</b> as spoken languages (units, meaning pieces, syntax).</li>
+          <li>Signs are <b>generally arbitrary and symbolic</b>, not just pantomime, which is why you can't guess them.</li>
+          <li>They follow the same <b>developmental stages</b> (manual babbling).</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CH 8: INTELLIGENCE ============ -->
+<section class="chapter" id="intelligence">
+  <div class="wrap stack-lg">
+    <div class="section-head">
+      <div class="eyebrow">Chapter 8 · Measuring Intelligence</div>
+      <h2>The WAIS-IV and test bias</h2>
+      <p>The <b>Wechsler Adult Intelligence Scale (WAIS-IV)</b> gives an overall IQ built from four index scores. Each index is measured by specific subtests.</p>
+    </div>
+
+    <div class="stack">
+      <div class="btn-row">
+        <button type="button" id="wais-quiz" aria-pressed="false">Quiz me: hide the subtests</button>
+      </div>
+      <div class="wais" id="wais">
+        <div class="quad q-verbal"><h4>Verbal Comprehension</h4><ul>
+          <li><b>Similarities</b> <span class="desc">· how are two things alike?</span></li>
+          <li><b>Vocabulary</b> <span class="desc">· define words</span></li>
+          <li><b>Information</b> <span class="desc">· general-knowledge questions</span></li></ul></div>
+        <div class="quad q-percep"><h4>Perceptual Reasoning</h4><ul>
+          <li><b>Block Design</b> <span class="desc">· copy a pattern with coloured blocks</span></li>
+          <li><b>Matrix Reasoning</b> <span class="desc">· pick the piece that completes a pattern</span></li>
+          <li><b>Visual Puzzles</b> <span class="desc">· pick pieces that build a shape</span></li></ul></div>
+        <div class="quad q-wm"><h4>Working Memory</h4><ul>
+          <li><b>Digit Span</b> <span class="desc">· repeat strings of numbers</span></li>
+          <li><b>Arithmetic</b> <span class="desc">· solve math problems in your head</span></li></ul></div>
+        <div class="quad q-speed"><h4>Processing Speed</h4><ul>
+          <li><b>Symbol Search</b> <span class="desc">· spot target symbols quickly</span></li>
+          <li><b>Coding</b> <span class="desc">· copy symbols paired with numbers, against the clock</span></li></ul></div>
+      </div>
+      <p class="muted">Memory hook: <b class="ui">V</b>erbal, <b class="ui">P</b>erceptual, <b class="ui">W</b>orking memory, <b class="ui">S</b>peed. Two quadrants have 3 subtests (top row), two have 2 (bottom row).</p>
+    </div>
+
+    <div class="stack">
+      <div class="sub-head">
+        <div class="eyebrow">Class activity · the 10-question “IQ test”</div>
+        <h3>What each question measured, and where bias crept in</h3>
+        <p>Questions were read only once, under time pressure. Afterward, groups decided which skill each item tested and whether it was biased.</p>
+      </div>
+      <div class="card table-scroll">
+        <table class="feature-table activity-table">
+          <thead><tr><th>Q</th><th>Item (roughly)</th><th>Skill measured</th><th>Bias?</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>Letter task (A B C D … P), remembered from one reading</td><td>Working memory</td><td></td></tr>
+            <tr><td>2</td><td>Copy symbols using a number-to-symbol key</td><td>Processing speed</td><td></td></tr>
+            <tr><td>3</td><td>How many legs: Deacon, Pickerel, Manx, Weimaraner, Chesterfield</td><td>Verbal / vocabulary</td><td><span class="flag">Biased</span> not common words</td></tr>
+            <tr><td>4</td><td>Mental math problem</td><td>Arithmetic / working memory</td><td></td></tr>
+            <tr><td>5</td><td>Cross out shapes/numbers following spoken rules</td><td>Perceptual / working memory</td><td></td></tr>
+            <tr><td>6</td><td>Fill in numbers in a series</td><td>Working memory</td><td></td></tr>
+            <tr><td>7</td><td>Unscramble “leg flies one have only” and judge it</td><td>Verbal / syntax</td><td><span class="flag">Biased</span> some ambiguity</td></tr>
+            <tr><td>8</td><td>Complete the pattern X O X X O X…</td><td>Perceptual reasoning</td><td></td></tr>
+            <tr><td>9</td><td>Count the cubes in figures A–D</td><td>Perceptual reasoning</td><td>Ambiguity in the figures</td></tr>
+            <tr><td>10</td><td>Mark regions of overlapping shapes from instructions</td><td>Working memory</td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Sources of unfairness: <mark>unfamiliar vocabulary or cultural knowledge</mark>, <mark>ambiguous wording or figures</mark>, and <mark>time pressure</mark>. A test can end up measuring background and test conditions instead of ability.</p>
+    </div>
+
+    <div class="grid-2">
+      <div class="card stack">
+        <div class="eyebrow">History · 1917</div>
+        <h3>Army Beta IQ test</h3>
+        <p>A picture-based test given to WWI U.S. Army recruits who couldn't read English. Test 6 asked recruits to spot the <b>missing part</b> of each drawing: a bowling alley, tennis court, phonograph, playing card. You can only answer if you grew up with those objects. <b>A non-verbal test is not automatically culture-free.</b></p>
+      </div>
+      <div class="card stack">
+        <div class="eyebrow">Discussion</div>
+        <h3>What <i>should</i> intelligence tests measure?</h3>
+        <ul>
+          <li>Most modern IQ tests focus on <b>cognitive abilities</b> (like the four WAIS-IV indexes).</li>
+          <li>Some researchers argue <b>other factors</b> should be included, such as creativity, practical/everyday problem solving, or emotional skills. Check your textbook for the theories your course names.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CH 11: MEASURING STRESS ============ -->
+<section class="chapter" id="stress">
+  <div class="wrap stack-lg">
+    <div class="section-head">
+      <div class="eyebrow">Chapter 11 · Stress</div>
+      <h2>Three ways to define and measure stress</h2>
+      <p>Each approach measures something different, and each of the first two has a <b>major issue</b> that the next one fixes. Know the measure <i>and</i> the limitation for each.</p>
+    </div>
+
+    <div class="approaches">
+      <div class="approach a1">
+        <div class="label">1 · Stress as a stimulus</div>
+        <h3>Stressors: the things that stress us out</h3>
+        <p><b>Measures:</b></p>
+        <ul>
+          <li><b>Social Readjustment Rating Scale (SRRS)</b>: 43 major life events with point values (death of spouse 100, divorce 73, marriage 50, fired at work 47, retirement 45).</li>
+          <li><b>Daily Hassles Scale</b>: everyday annoyances rated 0 / 5 / 10 (missing the bus, too little money, noisy housemate, laundry).</li>
+        </ul>
+        <div class="issue"><b>Major issue:</b> counting the events that happen to people doesn't tell us how stressed they <i>felt</i> about them.</div>
+      </div>
+      <div class="approach a2">
+        <div class="label">2 · Stress as a response</div>
+        <h3>How we react: thoughts, feelings, behaviours, physical sensations</h3>
+        <p>Stress <b>mobilizes energy</b> for <b>fight or flight</b>.</p>
+        <p><b>Measures (physiological):</b></p>
+        <ul>
+          <li>Heart rate</li>
+          <li>Blood pressure</li>
+          <li>Galvanic skin response (sweat / skin conductance)</li>
+          <li>Hormones, especially <b>cortisol</b> (blood or saliva)</li>
+        </ul>
+        <div class="issue"><b>Major issue:</b> body changes can have causes <i>other than stress</i> (e.g., excitement), and they don't tell us how the person is <i>interpreting</i> the sensations.</div>
+      </div>
+      <div class="approach a3">
+        <div class="label">3 · Stress as a transaction</div>
+        <h3>Event + how you appraise it</h3>
+        <div class="equation" aria-label="Stimulus plus Appraisal equals Response"><span class="s">Stimulus</span><span>+</span><span class="ap">Appraisal</span><span>=</span><span>Response</span></div>
+        <p class="muted">Event + “How well can I handle it?” = how stressed you feel.</p>
+        <p>Stress happens when <mark>demands outweigh resources</mark>.</p>
+        <p><b>Measure:</b> <b>Perceived Stress Scale (PSS)</b>: 10 items about the last month, rated 0 (never) to 4 (very often). E.g., “How often have you felt unable to control the important things in your life?”</p>
+      </div>
+    </div>
+
+    <div class="card seesaw-card">
+      <div class="stack">
+        <div class="eyebrow">Try it · transactional model</div>
+        <h3>Demands vs. resources</h3>
+        <div class="seesaw" aria-hidden="true">
+          <div class="pan-label l">Demands</div>
+          <div class="pan-label r">Resources</div>
+          <div class="beam" id="beam">
+            <div class="pan l" id="pan-l"></div>
+            <div class="pan r" id="pan-r"></div>
+          </div>
+          <div class="fulcrum"></div>
+          <div class="ground"></div>
+        </div>
+      </div>
+      <div class="stack">
+        <div class="slider">
+          <label for="demands">Demands <output id="demands-out" for="demands">8</output></label>
+          <input type="range" id="demands" min="0" max="10" value="8">
+        </div>
+        <div class="slider">
+          <label for="resources">Resources <output id="resources-out" for="resources">2</output></label>
+          <input type="range" id="resources" min="0" max="10" value="2">
+        </div>
+        <div class="btn-row" role="group" aria-label="Example situations">
+          <button type="button" id="ex-1" data-d="8" data-r="2">Many assignments, little time</button>
+          <button type="button" id="ex-2" data-d="5" data-r="8">Car breaks down, have roadside help</button>
+          <button type="button" id="ex-3" data-d="0" data-r="5">Not a threat</button>
+        </div>
+        <div class="readout bad" id="readout" aria-live="polite"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CH 11: APPRAISAL & COPING ============ -->
+<section class="chapter" id="coping">
+  <div class="wrap stack-lg">
+    <div class="section-head">
+      <div class="eyebrow">Chapter 11 · Appraisal and Coping</div>
+      <h2>From event to coping</h2>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <div class="eyebrow" style="margin-bottom:14px">Example: your car breaks down</div>
+        <div class="flow">
+          <div><div class="dot">E</div><div class="line"></div></div>
+          <div class="step"><h4>Event</h4><p>Something happens.</p></div>
+          <div><div class="dot">1</div><div class="line"></div></div>
+          <div class="step"><h4>Primary appraisal</h4><p>Is this a <b>threat</b>? What are the <b>demands</b>?<br>No → carry on, no stress. Yes → go to secondary appraisal.</p></div>
+          <div><div class="dot">2</div><div class="line"></div></div>
+          <div class="step"><h4>Secondary appraisal</h4><p><b>How well</b> can I cope? What are my <b>resources</b>?<br>Minimal resources → <b style="color:var(--bad)">STRESS</b>. Many resources → <b style="color:var(--good)">less stress</b>.</p></div>
+          <div><div class="dot">C</div></div>
+          <div class="step"><h4>Coping</h4><p>Change the situation, change your reaction, or prevent it next time.</p></div>
+        </div>
+      </div>
+      <div class="stack">
+        <div class="coping">
+          <div class="cope"><div class="tag t-problem">Problem-focused</div><h4>Change the SITUATION</h4><p>Call a tow truck.</p></div>
+          <div class="cope"><div class="tag t-emotion">Emotion-focused</div><h4>Change your REACTION</h4><p>Deep breathing, shifting your focus, <b>cognitive reappraisal</b> (thinking about it differently).</p></div>
+          <div class="cope"><div class="tag t-proactive">Proactive</div><h4>PREVENT future stressors</h4><p>Schedule regular maintenance on your car.</p></div>
+        </div>
+        <p class="note">If you <b>can't change</b> the situation, emotion-focused coping helps right now. If you <b>want a different outcome</b>, you need problem-focused coping. Big, complicated stressors usually need <b>both</b>.</p>
+      </div>
+    </div>
+
+    <div class="stack">
+      <div class="sub-head">
+        <div class="eyebrow">Try it</div>
+        <h3>Sort the coping strategy</h3>
+        <p class="muted">Pick the type for each strategy. <span class="score" id="sort-score">0 / 12 correct</span></p>
+      </div>
+      <div class="sorter" id="sorter"></div>
+    </div>
+
+    <div class="stack">
+      <div class="sub-head">
+        <div class="eyebrow">Class activity · scenarios</div>
+        <h3>The three in-class scenarios, with the answer key</h3>
+      </div>
+      <details class="reveal" id="sc1">
+        <summary>Scenario 1: Surprise quiz you forgot about (worth 5%)</summary>
+        <div class="body scenario">
+          <p>You arrive in class and discover a scheduled quiz you didn't put in your calendar, so you haven't studied.</p>
+          <p><b class="ui">Type:</b> Daily hassle. <b class="ui">Group stress ratings (1–5):</b> 2, 5, 4, 3, showing that people appraise the same event differently.</p>
+          <ul class="strategies">
+            <li><span class="pill p">Problem</span> Quickly look over your notes</li>
+            <li><span class="pill e">Emotion</span> Try to relax because it's not worth that much</li>
+            <li><span class="pill p">Problem</span> Lie to your prof about being sick to get out of it (changes the situation, though not a good idea)</li>
+            <li><span class="pill x">Proactive</span> Think about how to prevent this next time (calendar)</li>
+          </ul>
+          <p><b class="ui">Which coping?</b> Could be either, but you can't change the quiz, so <b>emotion-focused</b> coping helps most right now.</p>
+        </div>
+      </details>
+      <details class="reveal" id="sc2">
+        <summary>Scenario 2: Best friend's party vs. a shift you can't skip</summary>
+        <div class="body scenario">
+          <p>Your best friend's birthday party is next Friday, but you're scheduled to work. Skipping work means not making rent.</p>
+          <p><b class="ui">Type:</b> Daily hassle. <b class="ui">Ratings:</b> 3, 1, 4, 3.</p>
+          <ul class="strategies">
+            <li><span class="pill p">Problem</span> Try to find someone to cover your shift</li>
+            <li><span class="pill e">Emotion</span> Realize that your friend will understand</li>
+            <li><span class="pill p">Problem</span> Try to get the party moved</li>
+          </ul>
+          <p><b class="ui">Which coping?</b> Could be either, but if you really want to go, <b>problem-focused</b> coping is necessary.</p>
+        </div>
+      </details>
+      <details class="reveal" id="sc3">
+        <summary>Scenario 3: New job in a new city in three weeks</summary>
+        <div class="body scenario">
+          <p>You need to move (packing, cleaning, finding a place), buy work clothes, and wrap up loose ends before you go.</p>
+          <p><b class="ui">Type:</b> Major life event (or two!). <b class="ui">Ratings:</b> 4, 5, 4, 3.</p>
+          <ul class="strategies">
+            <li><span class="pill p">Problem</span> Make a list and prioritize things</li>
+            <li><span class="pill e">Emotion</span> Focus on the great opportunities and how exciting it is</li>
+            <li><span class="pill p">Problem</span> Ask friends and family for help with moving</li>
+            <li><span class="pill p">Problem</span> Try to get enough sleep and good food</li>
+          </ul>
+          <p><b class="ui">Which coping?</b> You'll need <b>both</b>: lots to do, and you also need to adjust your thinking and emotions.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="grid-2">
+      <div class="card stack">
+        <div class="eyebrow">Individual differences</div>
+        <h3>Same event, different stress</h3>
+        <ul>
+          <li>People <b>perceive different amounts of stress</b> for the same situation.</li>
+          <li>That changes wellbeing: some feel fine at exam time, or <i>excited</i> rather than terrified by big life changes.</li>
+          <li>To reduce stress: <b>reappraise</b> the situation (emotion-focused) and be <b>proactive</b> (organized and prepared, so you're ready for more).</li>
+          <li><b>Downside of low stress:</b> stress helps us <b>focus</b> on important tasks. Without it, you might not <b>change or improve</b>.</li>
+        </ul>
+      </div>
+      <div class="card stack">
+        <div class="eyebrow">Emotion-focused technique</div>
+        <h3>Diaphragmatic breathing</h3>
+        <p>Activates the <b>parasympathetic nervous system</b> via the <b>vagus nerve</b>. It changes your reaction to stress.</p>
+        <div class="breath">
+          <div class="breath-ring"><div class="breath-ball" id="ball"><span id="ball-text">Ready</span></div></div>
+          <div class="stack">
+            <ol>
+              <li>Sit with both feet flat on the floor.</li>
+              <li>One hand on your chest, one on your belly below the ribs.</li>
+              <li>Inhale for <b>3</b>: belly moves out, chest and shoulders stay still.</li>
+              <li>Exhale for <b>5</b> in a slow, steady stream.</li>
+              <li>Focus on the breathing, not the stressful thoughts.</li>
+            </ol>
+            <div class="btn-row"><button type="button" class="primary" id="breath-btn">Start breathing</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRACTICE MC ============ -->
+<section class="chapter" id="quiz">
+  <div class="wrap stack">
+    <div class="section-head">
+      <div class="eyebrow">Practice · multiple choice</div>
+      <h2>Fill in the bubble</h2>
+      <p>Questions written from the slide content. Pick an answer to see whether it's right and why.</p>
+    </div>
+    <div class="practice-bar">
+      <span class="score" id="mc-score">0 answered · 0 correct</span>
+      <button type="button" id="mc-reset">Reset quiz</button>
+    </div>
+    <div id="mc-list"></div>
+  </div>
+</section>
+
+<!-- ============ SHORT ANSWER ============ -->
+<section class="chapter" id="short">
+  <div class="wrap stack-lg">
+    <div class="section-head">
+      <div class="eyebrow">Practice · short answer (5 marks each)</div>
+      <h2>Short answers with answer keys</h2>
+      <p>On the midterm you'll see 4 and answer 3. Write your answer first, then open the key. Marks usually go to each definition, example, or explanation asked for, so answer every part.</p>
+    </div>
+
+    <div class="card sa">
+      <div class="eyebrow">Sample from the Midterm Review class</div>
+      <h3>Coffee and anxiety</h3>
+      <p>You hypothesize that the more coffee a person drinks, the more anxious they feel. Draw a scatterplot that would illustrate this relationship, labelling the X and Y axes. Then provide one causal, one reverse causal, and one specific third-variable explanation.</p>
+      <div class="marks">Scatterplot 1 · axis labels ½ + ½ · explanations 1 + 1 + 1 = 5</div>
+      <details class="reveal" id="sa0">
+        <summary>Answer key</summary>
+        <div class="body">
+          <svg class="scatter" viewBox="0 0 300 220" role="img" aria-label="Scatterplot with coffee consumption on the x-axis and anxiety on the y-axis, points rising from lower left to upper right">
+            <line x1="44" y1="180" x2="286" y2="180" style="stroke:var(--ink)" stroke-width="2"/>
+            <line x1="44" y1="180" x2="44" y2="14" style="stroke:var(--ink)" stroke-width="2"/>
+            <g style="fill:var(--accent)">
+              <circle cx="66" cy="160" r="5"/><circle cx="84" cy="150" r="5"/><circle cx="98" cy="162" r="5"/>
+              <circle cx="116" cy="134" r="5"/><circle cx="134" cy="126" r="5"/><circle cx="150" cy="138" r="5"/>
+              <circle cx="168" cy="104" r="5"/><circle cx="186" cy="96" r="5"/><circle cx="204" cy="84" r="5"/>
+              <circle cx="222" cy="92" r="5"/><circle cx="240" cy="62" r="5"/><circle cx="262" cy="48" r="5"/>
+            </g>
+            <text x="165" y="206" text-anchor="middle" style="fill:var(--ink);font-family:var(--font-display);font-size:13px">Coffee consumption</text>
+            <text x="18" y="97" text-anchor="middle" transform="rotate(-90 18 97)" style="fill:var(--ink);font-family:var(--font-display);font-size:13px">Anxiety</text>
+          </svg>
+          <ul class="key-list">
+            <li><span class="pts">1</span><span>Points slope upward (positive correlation).</span></li>
+            <li><span class="pts">½ + ½</span><span>X axis: coffee consumption. Y axis: anxiety.</span></li>
+            <li><span class="pts">1</span><span><b>Causal:</b> drinking coffee causes higher anxiety.</span></li>
+            <li><span class="pts">1</span><span><b>Reverse causal:</b> high anxiety causes people to drink more coffee.</span></li>
+            <li><span class="pts">1</span><span><b>Third variable:</b> lack of sleep causes both more coffee drinking and more anxiety. (Must name a <i>specific</i> variable.)</span></li>
+          </ul>
+        </div>
+      </details>
+    </div>
+
+    <div class="card sa">
+      <div class="eyebrow">Chapter 8 · Language</div>
+      <h3>Is ASL a real language?</h3>
+      <p>Define <b>phoneme</b> and <b>morpheme</b>. Using the word “chairs,” identify its phonemes and its morphemes. Then give two reasons why American Sign Language is considered a true language.</p>
+      <div class="marks">Definitions 1 + 1 · “chairs” breakdown 1 · reasons 1 + 1 = 5</div>
+      <details class="reveal" id="sa1">
+        <summary>Answer key</summary>
+        <div class="body">
+          <ul class="key-list">
+            <li><span class="pts">1</span><span><b>Phoneme:</b> the smallest unit of sound in a language.</span></li>
+            <li><span class="pts">1</span><span><b>Morpheme:</b> the smallest unit of meaning (a word, prefix or suffix).</span></li>
+            <li><span class="pts">½ + ½</span><span>Phonemes: /ch/ /ai/ /r/ /s/. Morphemes: (chair)(s), where “-s” means plural.</span></li>
+            <li><span class="pts">1 + 1</span><span>Any two: it has the same structural features as spoken language (phonemes/morphemes/syntax); its signs are arbitrary and symbolic rather than pantomime; it is generative; deaf infants go through the same developmental stages (manual babbling).</span></li>
+          </ul>
+          <p class="muted">Part marks risk: saying signs are “just gestures that look like the thing” is wrong. Most signs are arbitrary.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="card sa">
+      <div class="eyebrow">Chapter 8 · Intelligence</div>
+      <h3>The WAIS-IV and bias</h3>
+      <p>Name the four index scores of the WAIS-IV and give one subtest for any two of them. Then describe two ways an intelligence test item can be biased, with an example of each.</p>
+      <div class="marks">4 indexes ½ each = 2 · 2 subtests ½ each = 1 · 2 biases 1 each = 2</div>
+      <details class="reveal" id="sa2">
+        <summary>Answer key</summary>
+        <div class="body">
+          <ul class="key-list">
+            <li><span class="pts">2</span><span>Verbal Comprehension, Perceptual Reasoning, Working Memory, Processing Speed.</span></li>
+            <li><span class="pts">1</span><span>Any two correct pairings: Similarities / Vocabulary / Information (verbal); Block Design / Matrix Reasoning / Visual Puzzles (perceptual); Digit Span / Arithmetic (working memory); Symbol Search / Coding (processing speed).</span></li>
+            <li><span class="pts">1</span><span><b>Unfamiliar vocabulary or cultural knowledge</b>, e.g., “How many legs does a Weimaraner have?” tests whether you know the word, not reasoning. Or the 1917 Army Beta asking recruits to find the missing part of a bowling alley or phonograph.</span></li>
+            <li><span class="pts">1</span><span><b>Ambiguity or test conditions</b>, e.g., unclear wording (“leg flies one have only”), ambiguous figures (counting cubes), or heavy time pressure with questions read only once.</span></li>
+          </ul>
+        </div>
+      </details>
+    </div>
+
+    <div class="card sa">
+      <div class="eyebrow">Chapter 11 · Measuring stress</div>
+      <h3>Three approaches to stress</h3>
+      <p>Describe the three approaches to defining stress and give one way each is measured. Then explain one limitation of the stimulus approach and one limitation of the response approach.</p>
+      <div class="marks">3 approaches with a measure 1 each = 3 · limitations 1 + 1 = 5</div>
+      <details class="reveal" id="sa3">
+        <summary>Answer key</summary>
+        <div class="body">
+          <ul class="key-list">
+            <li><span class="pts">1</span><span><b>Stimulus:</b> stress is the event (stressor). Measured with the SRRS (major life events) or Daily Hassles Scale.</span></li>
+            <li><span class="pts">1</span><span><b>Response:</b> stress is how we react (thoughts, feelings, behaviours, physical sensations). Measured with heart rate, blood pressure, galvanic skin response, or cortisol.</span></li>
+            <li><span class="pts">1</span><span><b>Transaction:</b> stimulus + appraisal = response; stress when demands exceed resources. Measured with the Perceived Stress Scale (PSS).</span></li>
+            <li><span class="pts">1</span><span><b>Stimulus limitation:</b> knowing what happened doesn't tell you how stressed the person <i>felt</i>.</span></li>
+            <li><span class="pts">1</span><span><b>Response limitation:</b> physical changes could come from something other than stress (e.g., excitement), and don't show how the person <i>interprets</i> them.</span></li>
+          </ul>
+        </div>
+      </details>
+    </div>
+
+    <div class="card sa">
+      <div class="eyebrow">Chapter 11 · Appraisal and coping</div>
+      <h3>Laptop crash</h3>
+      <p>Your laptop crashes the night before a paper is due. Describe what happens during <b>primary</b> and <b>secondary appraisal</b> in this situation. Then give one <b>problem-focused</b>, one <b>emotion-focused</b>, and one <b>proactive</b> coping strategy.</p>
+      <div class="marks">Appraisals 1 + 1 · coping strategies 1 + 1 + 1 = 5</div>
+      <details class="reveal" id="sa4">
+        <summary>Answer key</summary>
+        <div class="body">
+          <ul class="key-list">
+            <li><span class="pts">1</span><span><b>Primary:</b> deciding whether it's a threat and what it demands. Yes: the paper is due and the file may be lost.</span></li>
+            <li><span class="pts">1</span><span><b>Secondary:</b> judging how well you can cope with your resources (a backup copy, a library computer, an understanding prof). Few resources → more stress.</span></li>
+            <li><span class="pts">1</span><span><b>Problem-focused</b> (change the situation): use a library computer, recover the file, ask for an extension.</span></li>
+            <li><span class="pts">1</span><span><b>Emotion-focused</b> (change your reaction): diaphragmatic breathing, reappraise (“one paper won't decide my degree”).</span></li>
+            <li><span class="pts">1</span><span><b>Proactive</b> (prevent future stressors): set up automatic cloud backups, finish papers earlier.</span></li>
+          </ul>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FLASHCARDS ============ -->
+<section class="chapter" id="cards">
+  <div class="wrap stack">
+    <div class="section-head">
+      <div class="eyebrow">Practice · key terms</div>
+      <h2>Flashcards</h2>
+      <p>Tap the card to flip it. Use the arrow keys when the card is focused.</p>
+    </div>
+    <div class="flash-wrap">
+      <button type="button" class="flash" id="flash" aria-live="polite"></button>
+      <div class="flash-nav">
+        <div class="btn-row">
+          <button type="button" id="fc-prev">← Previous</button>
+          <button type="button" id="fc-next" class="primary">Next →</button>
+        </div>
+        <span class="flash-count" id="fc-count"></span>
+        <div class="btn-row">
+          <button type="button" id="fc-shuffle">Shuffle</button>
+          <button type="button" id="fc-side" aria-pressed="false">Show definitions first</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHEAT SHEET ============ -->
+<section class="chapter" id="cheat">
+  <div class="wrap stack-lg">
+    <div class="section-head">
+      <div class="eyebrow">Before the exam</div>
+      <h2>Cheat sheet and short-answer tips</h2>
+    </div>
+    <div class="tips">
+      <div class="card stack">
+        <h3>Cheat sheet rules</h3>
+        <ul class="check">
+          <li>One 8.5 × 11″ sheet, both sides, hand-written or printed.</li>
+          <li>No attachments (post-its, stickers, etc.).</li>
+          <li>Write your <b>student number</b> on it.</li>
+        </ul>
+      </div>
+      <div class="card stack">
+        <h3>What to put on it</h3>
+        <ul class="check">
+          <li>Be choosy. Skip what you already know well.</li>
+          <li>Only concepts on the official study guide.</li>
+          <li>Your own words and your own examples.</li>
+          <li>Big, neat writing. Use headers, colours and boxes.</li>
+          <li>Organize however it makes sense to you: by chapter, alphabetically, or by concept.</li>
+          <li>Don't spend all your study time making it pretty.</li>
+        </ul>
+      </div>
+      <div class="card stack">
+        <h3>Writing short answers</h3>
+        <ul class="check">
+          <li>Count the parts: each definition, example or explanation is usually worth a mark.</li>
+          <li>Give a definition <i>and</i> an example when asked for both.</li>
+          <li>For “third variable” answers, name a specific variable.</li>
+          <li>Label every axis on a graph.</li>
+          <li>Practise by writing your own question and answer key, like the review-class activity.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Student-made study guide for PSYC 105 (GS04, Fall 2026), built from the Chapter 8, Chapter 11 and Midterm Review slides. It only covers those decks; always check the official course study guide for the full list of midterm topics.</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+
+  /* ---------- Word breakdown ---------- */
+  var WORDS = {
+    chairs:   { ph: ["/ch/", "/ai/", "/r/", "/s/"], mo: ["chair", "s"], note: { ph: "4 phonemes: 6 letters, but only 4 sounds (“ch” is one sound).", mo: "2 morphemes: chair (the object) + -s (plural)." } },
+    cats:     { ph: ["/k/", "/a/", "/t/", "/s/"], mo: ["cat", "s"], note: { ph: "4 phonemes. The letter c makes the /k/ sound.", mo: "2 morphemes: cat + -s (plural)." } },
+    unlocked: { ph: ["/u/", "/n/", "/l/", "/o/", "/k/", "/t/"], mo: ["un", "lock", "ed"], note: { ph: "6 phonemes. “ck” is one sound, and “-ed” is pronounced /t/ here.", mo: "3 morphemes: un- (not/reverse) + lock + -ed (past tense)." } }
+  };
+  var curWord = "chairs", curView = "ph";
+  var wd = document.getElementById("word-display"), wn = document.getElementById("word-note");
+  function renderWord() {
+    var w = WORDS[curWord];
+    wd.innerHTML = "";
+    w[curView].forEach(function (p) {
+      var s = document.createElement("span");
+      s.className = "chip " + curView;
+      s.textContent = curView === "mo" ? "(" + p + ")" : p;
+      wd.appendChild(s);
+    });
+    wn.textContent = w.note[curView];
+  }
+  document.querySelectorAll("[data-word]").forEach(function (b) {
+    b.addEventListener("click", function () {
+      curWord = b.dataset.word;
+      document.querySelectorAll("[data-word]").forEach(function (x) { x.setAttribute("aria-pressed", String(x === b)); });
+      renderWord();
+    });
+  });
+  document.querySelectorAll("[data-view]").forEach(function (b) {
+    b.addEventListener("click", function () {
+      curView = b.dataset.view;
+      document.querySelectorAll("[data-view]").forEach(function (x) { x.setAttribute("aria-pressed", String(x === b)); });
+      renderWord();
+    });
+  });
+  renderWord();
+
+  /* ---------- WAIS quiz toggle ---------- */
+  var waisBtn = document.getElementById("wais-quiz");
+  waisBtn.addEventListener("click", function () {
+    var on = waisBtn.getAttribute("aria-pressed") !== "true";
+    waisBtn.setAttribute("aria-pressed", String(on));
+    waisBtn.textContent = on ? "Show the subtests" : "Quiz me: hide the subtests";
+    document.querySelectorAll("#wais .quad").forEach(function (q) { q.classList.toggle("hide-subtests", on); });
+  });
+
+  /* ---------- Seesaw ---------- */
+  var dIn = document.getElementById("demands"), rIn = document.getElementById("resources");
+  var dOut = document.getElementById("demands-out"), rOut = document.getElementById("resources-out");
+  var beam = document.getElementById("beam"), panL = document.getElementById("pan-l"), panR = document.getElementById("pan-r");
+  var readout = document.getElementById("readout");
+  function blocks(el, n) {
+    el.innerHTML = "";
+    for (var i = 0; i < n; i++) { var b = document.createElement("span"); b.className = "blk"; el.appendChild(b); }
+  }
+  function updateSeesaw() {
+    var d = +dIn.value, r = +rIn.value;
+    dOut.textContent = d; rOut.textContent = r;
+    blocks(panL, d); blocks(panR, r);
+    var ang = Math.max(-18, Math.min(18, (r - d) * 2.4));
+    beam.style.transform = "rotate(" + ang + "deg)";
+    var cls, msg;
+    if (d === 0) { cls = "none"; msg = "Primary appraisal: not a threat, no demands. Carry on, no stress."; }
+    else if (r >= d) { cls = "ok"; msg = "Secondary appraisal: your resources cover the demands, so less stress."; }
+    else if (d - r <= 3) { cls = "bad"; msg = "Demands outweigh resources: stress."; }
+    else { cls = "bad"; msg = "Too many demands, too few resources: high stress!"; }
+    readout.className = "readout " + cls;
+    readout.textContent = msg;
+  }
+  dIn.addEventListener("input", updateSeesaw);
+  rIn.addEventListener("input", updateSeesaw);
+  document.querySelectorAll("[data-d]").forEach(function (b) {
+    b.addEventListener("click", function () { dIn.value = b.dataset.d; rIn.value = b.dataset.r; updateSeesaw(); });
+  });
+  // the beam holds the pans, so counter-position pans at its ends
+  panL.style.left = "0"; panL.style.bottom = "10px";
+  panR.style.right = "0"; panR.style.bottom = "10px";
+  updateSeesaw();
+
+  /* ---------- Coping sorter ---------- */
+  var SORT = [
+    ["Call a tow truck when your car breaks down", "problem", "You're changing the situation itself."],
+    ["Take slow, deep diaphragmatic breaths", "emotion", "Calms your body's reaction; the situation is unchanged."],
+    ["Book regular maintenance so your car doesn't break down", "proactive", "Done in advance to prevent a future stressor."],
+    ["Quickly look over your notes before the surprise quiz", "problem", "Tries to change the outcome (your quiz score)."],
+    ["Tell yourself the quiz is only worth 5%", "emotion", "Cognitive reappraisal: changing how you think about it."],
+    ["Ask a coworker to cover your Friday shift", "problem", "Changes the situation so you can go to the party."],
+    ["Remind yourself your friend will understand", "emotion", "Changes your reaction, not the scheduling conflict."],
+    ["Put every quiz date in your calendar on the first day of term", "proactive", "Prevents the surprise-quiz problem before it happens."],
+    ["Focus on how exciting the new job will be", "emotion", "Reappraising a big change as an opportunity."],
+    ["Make a list and prioritize your moving tasks", "problem", "Directly tackles the demands of the move."],
+    ["Start your cheat sheet a week before the midterm", "proactive", "Prepares ahead so the exam is less stressful later."],
+    ["Ask friends and family to help you move", "problem", "Adds resources to handle the situation."]
+  ];
+  var LABEL = { problem: "Problem-focused", emotion: "Emotion-focused", proactive: "Proactive" };
+  var sorter = document.getElementById("sorter"), sortScore = document.getElementById("sort-score");
+  var sortRight = 0;
+  SORT.forEach(function (it, i) {
+    var row = document.createElement("div"); row.className = "sort-item";
+    var t = document.createElement("div"); t.textContent = it[0];
+    var btns = document.createElement("div"); btns.className = "btn-row";
+    var fb = document.createElement("div"); fb.className = "fb"; fb.hidden = true;
+    ["problem", "emotion", "proactive"].forEach(function (k) {
+      var b = document.createElement("button"); b.type = "button"; b.id = "sort-" + i + "-" + k;
+      b.textContent = LABEL[k].replace("-focused", "");
+      b.addEventListener("click", function () {
+        if (row.dataset.done) return;
+        row.dataset.done = "1";
+        var ok = k === it[1];
+        if (ok) sortRight++;
+        row.classList.add(ok ? "right" : "wrong");
+        b.setAttribute("aria-pressed", "true");
+        fb.hidden = false;
+        fb.className = "fb " + (ok ? "right" : "wrong");
+        fb.textContent = (ok ? "Correct: " : "Not quite. It's " + LABEL[it[1]].toLowerCase() + ": ") + it[2];
+        btns.querySelectorAll("button").forEach(function (x) { x.disabled = true; });
+        sortScore.textContent = sortRight + " / " + SORT.length + " correct";
+      });
+      btns.appendChild(b);
+    });
+    row.appendChild(t); row.appendChild(btns); row.appendChild(fb);
+    sorter.appendChild(row);
+  });
+
+  /* ---------- Breathing pacer ---------- */
+  var ball = document.getElementById("ball"), ballText = document.getElementById("ball-text"), bBtn = document.getElementById("breath-btn");
+  var timer = null, running = false;
+  function stopBreath() {
+    clearInterval(timer); timer = null; running = false;
+    ball.style.transitionDuration = "1s"; ball.style.transform = "scale(.55)";
+    ballText.textContent = "Ready"; bBtn.textContent = "Start breathing";
+  }
+  function startBreath() {
+    running = true; bBtn.textContent = "Stop";
+    var phase = "in", n = 0;
+    function tick() {
+      if (n === 0) {
+        if (phase === "in") { ball.style.transitionDuration = "3s"; ball.style.transform = "scale(1)"; }
+        else { ball.style.transitionDuration = "5s"; ball.style.transform = "scale(.55)"; }
+      }
+      n++;
+      ballText.textContent = (phase === "in" ? "Inhale " : "Exhale ") + n;
+      var len = phase === "in" ? 3 : 5;
+      if (n >= len) { phase = phase === "in" ? "out" : "in"; n = 0; }
+    }
+    tick();
+    timer = setInterval(tick, 1000);
+  }
+  bBtn.addEventListener("click", function () { running ? stopBreath() : startBreath(); });
+
+  /* ---------- Multiple choice ---------- */
+  var MC = [
+    ["The word “chairs” can be split into /ch/ /ai/ /r/ /s/. Each of these units is a:", ["Morpheme", "Phoneme", "Syntax rule", "Extralinguistic cue"], 1, "Phonemes are the smallest units of sound."],
+    ["How many morphemes are in “chairs”?", ["1", "2", "4", "6"], 1, "chair + -s (plural). Four is the number of phonemes."],
+    ["“Dog bites man” and “Man bites dog” use the same words but mean different things. Which structural feature explains this?", ["Phonemes", "Morphemes", "Syntax", "Arbitrariness"], 2, "Syntax is the set of rules for ordering words into sentences."],
+    ["A friend says “Great job” in a sarcastic tone and you know they mean the opposite. You're relying on:", ["Syntax", "Morphemes", "Extralinguistic information", "Generativity"], 2, "Tone, facial expression and context carry meaning outside the words themselves."],
+    ["You say a sentence nobody has ever said before, and your listener understands it perfectly. This shows that language is:", ["Generative", "Arbitrary", "Iconic", "Developmental"], 0, "A finite set of units can produce unlimited new sentences."],
+    ["The word “cat” doesn't sound or look like a cat. This illustrates that language is:", ["Generative", "Arbitrary / symbolic", "Developmental", "Located in specialized brain areas"], 1, "The link between a word and its meaning is a convention."],
+    ["A 9-month-old deaf baby repeatedly makes simple hand shapes. This is best described as:", ["Random motor movement unrelated to language", "Manual babbling, showing sign language follows developmental stages", "Evidence that sign language is not a true language", "A processing speed skill"], 1, "Manual babbling parallels vocal babbling in hearing babies."],
+    ["Why was it so hard to guess sentences from made-up gestures in class?", ["Gestures are too obvious to interpret", "True sign languages use arbitrary, symbolic signs, and we didn't know them", "Sign languages have no syntax", "Gestures can't express nouns"], 1, "Real signs are mostly arbitrary, so you need to know them, like spoken words."],
+    ["Which statement about true sign languages such as ASL is correct?", ["They are mostly pantomime", "They lack grammar", "They have the same structural features as spoken languages", "They don't show developmental stages"], 2, "Sign languages are full languages with the same structural features."],
+    ["On the WAIS-IV, Digit Span and Arithmetic belong to which index?", ["Verbal Comprehension", "Perceptual Reasoning", "Working Memory", "Processing Speed"], 2, "Both require holding and manipulating information in mind."],
+    ["Block Design, Matrix Reasoning and Visual Puzzles belong to which WAIS-IV index?", ["Perceptual Reasoning", "Processing Speed", "Working Memory", "Verbal Comprehension"], 0, "These are visual-spatial reasoning tasks."],
+    ["A test-taker copies symbols that match numbers as quickly as possible. This subtest (Coding) measures:", ["Verbal Comprehension", "Working Memory", "Perceptual Reasoning", "Processing Speed"], 3, "Coding and Symbol Search make up Processing Speed."],
+    ["Similarities, Vocabulary and Information make up which WAIS-IV index?", ["Verbal Comprehension", "Working Memory", "Perceptual Reasoning", "Processing Speed"], 0, "All three rely on words and acquired knowledge."],
+    ["“How many legs does a Weimaraner have?” was flagged as biased because it:", ["Uses math", "Depends on knowing an uncommon word rather than reasoning", "Has a time limit", "Measures processing speed"], 1, "If you don't know a Weimaraner is a dog, you can't answer, whatever your ability."],
+    ["The 1917 Army Beta test used pictures (e.g., find what's missing from a bowling alley) for recruits who couldn't read English. The main lesson is that:", ["Picture tests are always fair", "A non-verbal test can still be culturally biased", "Verbal tests are the only valid IQ tests", "IQ tests measure processing speed only"], 1, "Recognizing a phonograph or tennis court depends on cultural experience."],
+    ["The Social Readjustment Rating Scale (SRRS) measures stress as a:", ["Stimulus", "Response", "Transaction", "Appraisal"], 0, "It counts major life events (stressors)."],
+    ["What is the major issue with measuring stress as a stimulus?", ["It's too expensive", "It doesn't tell us how stressed people felt about the events", "It only measures hormones", "It confuses stress with excitement"], 1, "The same event can be very stressful for one person and not for another."],
+    ["A researcher measures cortisol and galvanic skin response. What is the main limitation of this approach?", ["It ignores physical sensations", "Body changes could be due to something else, like excitement, and don't show interpretation", "It only counts daily hassles", "It can't be measured objectively"], 1, "This is the stress-as-a-response approach and its major issue."],
+    ["According to the transactional view, stress is:", ["Stimulus + Appraisal = Response", "Response − Stimulus", "Only the physical response", "Only the number of life events"], 0, "How you appraise an event determines how stressed you feel."],
+    ["Your car breaks down and you ask yourself, “Is this a threat? What does it demand of me?” This is:", ["Secondary appraisal", "Primary appraisal", "Proactive coping", "Emotion-focused coping"], 1, "Primary appraisal judges whether there's a threat (the demands)."],
+    ["You then think, “I have roadside assistance and enough money for repairs.” This is ______ and will likely lead to ______.", ["Primary appraisal; more stress", "Secondary appraisal; less stress", "Secondary appraisal; more stress", "Proactive coping; no stress"], 1, "Secondary appraisal weighs resources. Many resources means less stress."],
+    ["The Perceived Stress Scale asks how often in the last month you felt unable to control important things. It treats stress as a:", ["Stimulus", "Response", "Transaction", "Daily hassle"], 2, "It measures the person's appraisal of their demands and resources."],
+    ["Calling a tow truck after your car breaks down is:", ["Problem-focused coping", "Emotion-focused coping", "Proactive coping", "Primary appraisal"], 0, "It changes the situation."],
+    ["Telling yourself “the quiz is only worth 5%” is an example of:", ["Problem-focused coping", "Emotion-focused coping (cognitive reappraisal)", "Proactive coping", "Secondary appraisal only"], 1, "You're changing your reaction, not the quiz."],
+    ["Scheduling regular car maintenance so it doesn't break down is:", ["Problem-focused coping", "Emotion-focused coping", "Proactive coping", "A daily hassle"], 2, "Proactive coping prevents future stressors."],
+    ["Diaphragmatic breathing reduces stress mainly by:", ["Activating the sympathetic nervous system", "Activating the parasympathetic nervous system via the vagus nerve", "Raising cortisol", "Changing the stressful situation"], 1, "It's an emotion-focused technique that calms the body's response."],
+    ["Missing the bus and a noisy housemate are examples of:", ["Major life events", "Daily hassles", "Proactive coping", "Physiological responses"], 1, "These items appear on the Daily Hassles Scale."],
+    ["Which is a possible downside of perceiving very little stress?", ["You may lack the focus or push to change and improve", "You will always perform better", "Your cortisol will be too high", "You cannot use emotion-focused coping"], 0, "Some stress helps us focus on important events and tasks."]
+  ];
+  var mcList = document.getElementById("mc-list"), mcScore = document.getElementById("mc-score");
+  var answered = 0, correct = 0;
+  function updateScore() { mcScore.textContent = answered + " / " + MC.length + " answered · " + correct + " correct"; }
+  function buildMC() {
+    mcList.innerHTML = ""; answered = 0; correct = 0; updateScore();
+    MC.forEach(function (q, qi) {
+      var wrap = document.createElement("div"); wrap.className = "mcq";
+      var qt = document.createElement("div"); qt.className = "qtext";
+      var num = document.createElement("span"); num.className = "qnum"; num.textContent = (qi + 1) + ".";
+      var txt = document.createElement("span"); txt.textContent = q[0];
+      qt.appendChild(num); qt.appendChild(txt);
+      var opts = document.createElement("div"); opts.className = "opts"; opts.setAttribute("role", "group"); opts.setAttribute("aria-label", "Question " + (qi + 1) + " options");
+      var why = document.createElement("div"); why.className = "why"; why.hidden = true;
+      q[1].forEach(function (o, oi) {
+        var b = document.createElement("button"); b.type = "button"; b.className = "opt"; b.id = "mc-" + qi + "-" + oi;
+        var bub = document.createElement("span"); bub.className = "bubble"; bub.textContent = "ABCDE"[oi];
+        var lab = document.createElement("span"); lab.textContent = o;
+        b.appendChild(bub); b.appendChild(lab);
+        b.addEventListener("click", function () {
+          if (wrap.dataset.done) return;
+          wrap.dataset.done = "1"; answered++;
+          var ok = oi === q[2];
+          if (ok) correct++;
+          opts.querySelectorAll(".opt").forEach(function (x, xi) {
+            x.disabled = true;
+            if (xi === q[2]) x.classList.add("correct");
+          });
+          if (!ok) b.classList.add("incorrect");
+          why.hidden = false;
+          why.innerHTML = "";
+          var lead = document.createElement("b");
+          lead.textContent = ok ? "Correct. " : "Answer: " + "ABCDE"[q[2]] + ". ";
+          lead.style.color = ok ? "var(--good)" : "var(--bad)";
+          why.appendChild(lead);
+          why.appendChild(document.createTextNode(q[3]));
+          updateScore();
+        });
+        opts.appendChild(b);
+      });
+      wrap.appendChild(qt); wrap.appendChild(opts); wrap.appendChild(why);
+      mcList.appendChild(wrap);
+    });
+  }
+  document.getElementById("mc-reset").addEventListener("click", buildMC);
+  buildMC();
+
+  /* ---------- Flashcards ---------- */
+  var CARDS = [
+    ["Phoneme", "The smallest unit of sound in a language. “chairs” = /ch/ /ai/ /r/ /s/."],
+    ["Morpheme", "The smallest unit of meaning: a word, prefix or suffix. “chairs” = (chair)(s)."],
+    ["Syntax", "Rules for ordering words into sentences. “Dog bites man” ≠ “Man bites dog.”"],
+    ["Extralinguistic information", "Meaning from outside the words: tone of voice, facial expression, gestures, context."],
+    ["Generative", "Language can combine a finite set of units into an unlimited number of new sentences."],
+    ["Arbitrary / symbolic", "Words (and most signs) don't resemble what they stand for; the link is a shared convention."],
+    ["Specialized brain areas", "Language depends on dedicated regions, usually in the left hemisphere (e.g., Broca's and Wernicke's areas)."],
+    ["Developmental stages", "Language is acquired in a predictable sequence, in both spoken and signed languages."],
+    ["Manual babbling", "Repetitive hand shapes made by infants exposed to sign language (around 9 months), like vocal babbling."],
+    ["True sign languages", "Full languages (e.g., ASL) with the same structural features as spoken language, using mostly arbitrary, symbolic signs."],
+    ["WAIS-IV", "Wechsler Adult Intelligence Scale: 4 indexes: Verbal Comprehension, Perceptual Reasoning, Working Memory, Processing Speed."],
+    ["Verbal Comprehension", "WAIS-IV index: Similarities, Vocabulary, Information."],
+    ["Perceptual Reasoning", "WAIS-IV index: Block Design, Matrix Reasoning, Visual Puzzles."],
+    ["Working Memory", "WAIS-IV index: Digit Span, Arithmetic."],
+    ["Processing Speed", "WAIS-IV index: Symbol Search, Coding."],
+    ["Test bias", "When items measure background or conditions instead of ability: uncommon vocabulary, cultural knowledge, ambiguity, time pressure."],
+    ["Army Beta (1917)", "Picture-based IQ test for WWI recruits who couldn't read English; still culturally biased (e.g., missing parts of a bowling alley)."],
+    ["Stress as a stimulus", "Stress = the stressor (event). Measured with the SRRS or Daily Hassles Scale. Issue: doesn't show how stressed people felt."],
+    ["Social Readjustment Rating Scale (SRRS)", "Checklist of 43 major life events with point values (death of spouse = 100, divorce = 73, marriage = 50)."],
+    ["Daily Hassles Scale", "Rates everyday annoyances 0 / 5 / 10: missing the bus, too little money, noisy housemate."],
+    ["Stress as a response", "Stress = our reaction (thoughts, feelings, behaviours, physical sensations). Issue: body changes may not be stress, and don't show interpretation."],
+    ["Fight or flight", "Stress mobilizes energy so the body can fight or flee a threat."],
+    ["Physiological stress measures", "Heart rate, blood pressure, galvanic skin response, hormones (cortisol)."],
+    ["Stress as a transaction", "Stimulus + Appraisal = Response. Stress happens when demands outweigh resources. Measured with the PSS."],
+    ["Perceived Stress Scale (PSS)", "10 questions about the last month, rated 0 (never) to 4 (very often)."],
+    ["Primary appraisal", "Is this situation a threat? What are the demands? If no, no stress."],
+    ["Secondary appraisal", "How well can I cope? What are my resources? Few = stress; many = less stress."],
+    ["Problem-focused coping", "Change the SITUATION (e.g., call a tow truck)."],
+    ["Emotion-focused coping", "Change your REACTION (deep breathing, shifting focus, cognitive reappraisal)."],
+    ["Proactive coping", "Act in advance to PREVENT future stressors (e.g., regular car maintenance)."],
+    ["Cognitive reappraisal", "Thinking about a situation differently to change how you feel about it (e.g., “it's only 5%”)."],
+    ["Diaphragmatic breathing", "Belly breathing, in for 3 and out for 5. Activates the parasympathetic nervous system via the vagus nerve."]
+  ];
+  var order = CARDS.map(function (_, i) { return i; });
+  var idx = 0, flipped = false, defFirst = false;
+  var flash = document.getElementById("flash"), fcCount = document.getElementById("fc-count");
+  function renderCard() {
+    var c = CARDS[order[idx]];
+    var showDef = flipped !== defFirst;
+    flash.classList.toggle("back", flipped);
+    flash.innerHTML = "";
+    var side = document.createElement("span"); side.className = "side"; side.textContent = showDef ? "Definition" : "Term";
+    var main = document.createElement("span"); main.className = showDef ? "def" : "term"; main.textContent = showDef ? c[1] : c[0];
+    var hint = document.createElement("span"); hint.className = "side"; hint.textContent = flipped ? "Tap to flip back" : "Tap to flip";
+    flash.appendChild(side); flash.appendChild(main); flash.appendChild(hint);
+    fcCount.textContent = "Card " + (idx + 1) + " of " + CARDS.length;
+  }
+  function go(d) { idx = (idx + d + CARDS.length) % CARDS.length; flipped = false; renderCard(); }
+  flash.addEventListener("click", function () { flipped = !flipped; renderCard(); });
+  flash.addEventListener("keydown", function (e) {
+    if (e.key === "ArrowRight") { e.preventDefault(); go(1); }
+    if (e.key === "ArrowLeft") { e.preventDefault(); go(-1); }
+  });
+  document.getElementById("fc-next").addEventListener("click", function () { go(1); });
+  document.getElementById("fc-prev").addEventListener("click", function () { go(-1); });
+  document.getElementById("fc-shuffle").addEventListener("click", function () {
+    for (var i = order.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = order[i]; order[i] = order[j]; order[j] = t; }
+    idx = 0; flipped = false; renderCard();
+  });
+  var sideBtn = document.getElementById("fc-side");
+  sideBtn.addEventListener("click", function () {
+    defFirst = !defFirst; flipped = false;
+    sideBtn.setAttribute("aria-pressed", String(defFirst));
+    renderCard();
+  });
+  renderCard();
+})();
+</script>
