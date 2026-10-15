@@ -1,0 +1,320 @@
+<title>PSYC 105 Cheat Sheet</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+/* Single deliberate theme: black on white, so copied text pastes into Google Docs as black text */
+:root { --bg: #e9ecec; --paper: #ffffff; --ink: #000000; --muted: #4a5152; --line: #c9cfcf; --btn: #1d5c46; --btn-ink: #ffffff; color-scheme: light; }
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: Arial, Helvetica, sans-serif; }
+.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--paper); border-bottom: 1px solid var(--line);
+  padding-block: 10px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.bar-in { max-width: 8.5in; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; }
+.bar h1 { font-size: 15px; margin: 0; flex: 1 1 200px; color: var(--ink); }
+.bar button { font: 600 14px Arial, Helvetica, sans-serif; border-radius: 6px; padding: 8px 14px; min-height: 38px; cursor: pointer; border: 1px solid var(--btn); background: var(--paper); color: var(--btn); }
+.bar button.primary { background: var(--btn); color: var(--btn-ink); }
+.bar button:focus-visible { outline: 3px solid var(--btn); outline-offset: 2px; }
+#status { font-size: 13px; color: var(--muted); flex-basis: 100%; min-height: 1em; }
+.steps { max-width: 8.5in; margin: 14px auto 0; font-size: 13px; line-height: 1.45; color: var(--ink); background: var(--paper); border: 1px solid var(--line); border-radius: 8px; padding: 10px 14px; }
+.steps ol { margin: 4px 0 0; padding-left: 1.3em; }
+.outer { padding-block: 16px 40px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.sheet { background: var(--paper); color: var(--ink); line-height: 1.17; }
+.sheet .page { width: 8.5in; max-width: 100%; margin: 0 auto 16px; padding: 0.3in; box-shadow: 0 1px 4px rgba(0,0,0,.15); background: var(--paper); column-count: 3; column-gap: 0.14in; column-fill: auto; height: 11in; overflow: hidden; }
+#p1 { font-size: 7.75pt; } #p2 { font-size: 7.9pt; }
+.sheet h1 { font-size: 1.12em; margin: 0 0 0.2em; }
+.sheet h2 { font-size: 1.04em; margin: 0.45em 0 0.15em; text-transform: uppercase; }
+.sheet h3 { font-size: 1em; margin: 0.35em 0 0.1em; }
+.sheet h1, .sheet h2, .sheet h3 { break-after: avoid; color: var(--ink); }
+.sheet p { margin: 0 0 0.25em; }
+.sheet ul { margin: 0 0 0.25em; padding-left: 1.05em; }
+.sheet li { margin: 0 0 0.08em; }
+.sheet .id { font-size: 1.15em; }
+.outer { overflow-x: hidden; }
+@media (max-width: 860px) {
+  .sheet .page { column-count: 1; height: auto; overflow: visible; font-size: 11pt !important; padding: 16px; }
+}
+</style>
+
+<div class="bar">
+  <div class="bar-in">
+    <h1>PSYC 105 Cheat Sheet</h1>
+    <button type="button" class="primary" id="copy-btn">Copy all for Google Docs</button>
+    <button type="button" id="select-btn">Select all text</button>
+    <div id="status" aria-live="polite"></div>
+  </div>
+  <div class="steps">
+    <b>To use in Google Docs:</b>
+    <ol>
+      <li>Click <b>Copy all for Google Docs</b>, open a new Google Doc, and paste (Ctrl+V / Cmd+V).</li>
+      <li><b>File &gt; Page setup</b>: Letter size, all margins <b>0.3</b>.</li>
+      <li><b>Format &gt; Columns</b>: choose <b>3</b> columns.</li>
+      <li>If it runs past 2 pages, select all (Ctrl+A) and lower the font size to 7 or 7.5.</li>
+      <li>For a PDF: <b>File &gt; Download &gt; PDF</b>. Print double-sided at actual size, and write your student ID on it.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="outer">
+<div class="sheet" id="sheet">
+<div class="page" id="p1">
+<p class="id"><b>Student ID #: ______________</b></p>
+<h1>PSYC 105 Midterm Cheat Sheet (Front)</h1>
+<p>30 MC (1 each) + 3 of 4 SA (5 each) = 45 marks, 80 min. Fill Scantron bubbles completely (no checks or Xs).</p>
+
+<h2>Ch 8: Language, structural features</h2>
+<ul>
+<li><b>Phoneme</b> = smallest unit of <b>sound</b>. chairs = /ch/ /ai/ /r/ /s/ (6 letters, 4 sounds). cats = /k/ /a/ /t/ /s/. unlocked = /u/ /n/ /l/ /o/ /k/ /t/ (ck = 1 sound, -ed sounds like /t/). Count sounds, not letters.</li>
+<li><b>Morpheme</b> = smallest unit of <b>meaning</b> (whole word, prefix, suffix). chairs = (chair)(s) = 2, -s = plural. cats = (cat)(s). unlocked = (un)(lock)(ed) = 3: un- = reverse/not, -ed = past tense.</li>
+<li><b>Syntax</b> = rules for ordering words into sentences (grammar). "Dog bites man" vs "Man bites dog": same words, different meaning.</li>
+<li><b>Extralinguistic information</b> = meaning from outside the words: tone of voice, facial expression, gestures, context. Ex: sarcastic "Great job" means the opposite; "Can you pass the salt?" is a request, not a question about ability.</li>
+<li>Order of size: phonemes build morphemes, morphemes build words, syntax arranges words into sentences, extralinguistic info adds meaning around them.</li>
+</ul>
+
+<h2>Ch 8: Properties of language</h2>
+<ul>
+<li><b>Generative</b>: a finite set of sounds/words combines into an unlimited number of new sentences that others understand. Ex: you can say a sentence nobody has ever said and be understood.</li>
+<li><b>Arbitrary / symbolic</b>: words don't resemble what they mean ("cat" doesn't look/sound like a cat); the link is a shared convention. Ex: dog / chien / perro all mean the same animal.</li>
+<li><b>Specialized brain areas</b>: usually left hemisphere; <b>Broca's area</b> (speech production), <b>Wernicke's area</b> (comprehension).</li>
+<li><b>Developmental stages</b>: language is learned in a predictable sequence (babbling, first words, combining words). Deaf babies show <b>manual babbling</b> (repetitive hand shapes, ~9 months), just like vocal babbling in hearing babies.</li>
+</ul>
+
+<h2>Ch 8: Sign language (gesture activity)</h2>
+<ul>
+<li>Activity: groups took turns as signer, data recorder and message recipient, guessing sentences from made-up gestures.</li>
+<li>It was hard because it's hard to invent a sign for many words, and <b>we don't already know the correct ASL sign</b> for each word.</li>
+<li><b>True sign languages (ASL) are real languages</b>: same <b>structural features</b> as spoken language (units, meaning pieces, syntax); signs are generally <b>arbitrary and symbolic</b> (not pantomime, so you can't guess them); generative; same developmental stages (manual babbling); use the same specialized brain areas.</li>
+<li>Common wrong answer: "signs are just gestures that look like the thing." Most signs are arbitrary.</li>
+</ul>
+
+<h2>Ch 8: WAIS-IV (Wechsler Adult Intelligence Scale)</h2>
+<p>4 index scores combine into overall (full-scale) IQ:</p>
+<ul>
+<li><b>Verbal Comprehension</b>: <b>Similarities</b> (how are 2 things alike, e.g., apple and banana), <b>Vocabulary</b> (define words), <b>Information</b> (general knowledge, e.g., capital of a country).</li>
+<li><b>Perceptual Reasoning</b>: <b>Block Design</b> (copy a red/white pattern with coloured blocks), <b>Matrix Reasoning</b> (pick the piece that completes a pattern grid), <b>Visual Puzzles</b> (pick pieces that build a shape).</li>
+<li><b>Working Memory</b>: <b>Digit Span</b> (repeat number strings forward/backward), <b>Arithmetic</b> (math word problems in your head).</li>
+<li><b>Processing Speed</b>: <b>Symbol Search</b> (find target symbols in a row fast), <b>Coding</b> (copy symbols matched to numbers, timed).</li>
+</ul>
+<p>Memory: <b>V P W S</b>. Verbal + Perceptual have 3 subtests each; Working Memory + Speed have 2 each.</p>
+<p>Quick ID: holding/manipulating info in mind = working memory; doing simple tasks fast = processing speed; visual/spatial patterns = perceptual reasoning; words/knowledge = verbal comprehension.</p>
+
+<h2>Ch 8: Class "IQ test" activity</h2>
+<ul>
+<li>Q1 letters (A-P) = working memory. Q2 copy symbols using number key = processing speed. Q3 how many legs: Deacon, Pickerel, Manx, Weimaraner, Chesterfield = verbal/vocabulary, <b>BIASED: not common words</b>. Q4 mental math = arithmetic/working memory. Q5 cross out shapes/numbers by spoken rules = perceptual/working memory. Q6 fill in number series = working memory. Q7 unscramble "leg flies one have only" = verbal/syntax, <b>BIASED: some ambiguity</b> (flies have more than one leg). Q8 complete X O X X O X pattern = perceptual reasoning. Q9 count cubes in figures A-D = perceptual reasoning (ambiguity in figures). Q10 overlapping shapes = working memory.</li>
+<li>Questions read only <b>once</b>, under heavy <b>time pressure</b>.</li>
+<li><b>Sources of test bias</b>: (1) unfamiliar vocabulary or cultural knowledge, (2) ambiguous wording or figures, (3) time pressure / test conditions. A biased test measures background or conditions instead of ability.</li>
+</ul>
+
+<h2>Ch 8: Army Beta IQ test (1917)</h2>
+<ul>
+<li>Picture-based test for WWI U.S. Army recruits who couldn't read English (Army Alpha was the written version). Test 6: find the <b>missing part</b> of drawings (bowling alley, tennis court, phonograph, playing card, light bulb).</li>
+<li>Lesson: <b>non-verbal does not mean culture-free</b>; you need cultural experience with the objects, so it was still biased.</li>
+</ul>
+
+<h2>Ch 8: What should IQ tests measure?</h2>
+<ul>
+<li>Most modern IQ tests focus on <b>cognitive abilities</b> (like the 4 WAIS-IV indexes).</li>
+<li>Some researchers argue <b>other factors</b> should be included (e.g., creativity, practical/everyday problem solving, emotional skills).</li>
+</ul>
+
+<h2>Practice SA: Is ASL a real language? (5)</h2>
+<ul>
+<li>(1) Phoneme = smallest unit of sound. (1) Morpheme = smallest unit of meaning.</li>
+<li>(1) chairs: phonemes /ch/ /ai/ /r/ /s/; morphemes (chair)(s).</li>
+<li>(1+1) Any 2: same structural features as spoken language; signs arbitrary and symbolic; generative; same developmental stages (manual babbling).</li>
+</ul>
+
+<h2>Practice SA: WAIS-IV and bias (5)</h2>
+<ul>
+<li>(2) 4 indexes, 1/2 each: Verbal Comprehension, Perceptual Reasoning, Working Memory, Processing Speed.</li>
+<li>(1) 2 subtests, 1/2 each: e.g., Vocabulary (verbal), Digit Span (working memory).</li>
+<li>(1) Bias 1: uncommon vocabulary/culture, e.g., "How many legs does a Weimaraner have?" or Army Beta bowling alley.</li>
+<li>(1) Bias 2: ambiguity or conditions, e.g., "leg flies one have only", unclear cube figures, time pressure, read once.</li>
+</ul>
+
+<h2>Short answer: correlation template</h2>
+<p>Ex: more coffee = more anxiety. <b>Scatterplot</b>: positive slope (dots rise left to right) = 1; label <b>X = coffee consumption</b>, <b>Y = anxiety</b> (1/2 each).</p>
+<ul>
+<li>(1) <b>Causal</b>: coffee causes anxiety.</li>
+<li>(1) <b>Reverse causal</b>: anxiety causes more coffee drinking.</li>
+<li>(1) <b>Third variable</b> (name a <b>specific</b> one): lack of sleep causes both more coffee and more anxiety.</li>
+</ul>
+<p>Positive = both rise together. Negative = one rises as the other falls (dots fall left to right). No correlation = no pattern. Correlation does not prove causation.</p>
+
+<h2>Textbook extras: Ch 8 (not on slides; check study guide)</h2>
+<h3>Thinking</h3>
+<ul>
+<li><b>Concept</b> = mental category of similar things. <b>Prototype</b> = best/most typical example (robin for "bird").</li>
+<li><b>Algorithm</b> = step-by-step procedure that guarantees a solution (slow). <b>Heuristic</b> = mental shortcut (fast, error-prone).</li>
+<li><b>Availability heuristic</b>: judge likelihood by how easily examples come to mind (fear of plane crashes). <b>Representativeness heuristic</b>: judge by how well something matches a prototype, ignoring base rates.</li>
+<li><b>Confirmation bias</b>: seek info that supports what you already believe. <b>Belief perseverance</b>: keep beliefs after they're disproven.</li>
+<li><b>Functional fixedness</b>: only see objects' usual use. <b>Mental set</b>: stick with a strategy that worked before. <b>Framing</b>: wording changes decisions (95% survive vs 5% die).</li>
+<li><b>Insight</b> = sudden "aha" solution.</li>
+</ul>
+<h3>Language development</h3>
+<ul>
+<li>Cooing (~2 mo), babbling (~4-6 mo, all phonemes, then narrows to native language), one-word stage (~12 mo), two-word / <b>telegraphic speech</b> (~18-24 mo, "want milk"), full sentences.</li>
+<li><b>Overregularization</b>: applying grammar rules too widely ("goed", "mouses"), shows kids learn rules, not just imitation.</li>
+<li><b>Critical/sensitive period</b>: language learned most easily early in life.</li>
+<li><b>Linguistic relativity (Sapir-Whorf)</b>: language shapes thought; weak version (influences) is supported, strong version (determines) is not.</li>
+</ul>
+<h3>Intelligence theories and testing</h3>
+<ul>
+<li><b>Spearman's g</b>: one general intelligence underlies all abilities (scores on different tests correlate) + specific abilities (s).</li>
+<li><b>Fluid intelligence</b> = reasoning/solving new problems (declines with age). <b>Crystallized</b> = accumulated knowledge/vocabulary (stable or rises).</li>
+<li><b>Gardner's multiple intelligences</b>: linguistic, logical-mathematical, spatial, musical, bodily-kinesthetic, interpersonal, intrapersonal, naturalist.</li>
+<li><b>Sternberg's triarchic theory</b>: analytical, creative, practical intelligence.</li>
+<li><b>Emotional intelligence</b>: perceive, use, understand and manage emotions.</li>
+<li><b>Binet</b>: mental age. <b>Stern's ratio IQ</b> = mental age / chronological age x 100. Modern <b>deviation IQ</b>: mean 100, SD 15; 68% score 85-115, 95% score 70-130.</li>
+<li><b>Standardization</b> = same procedures + norms from a representative group. <b>Reliability</b> = consistent scores (test-retest). <b>Validity</b> = measures what it claims to (predicts school performance).</li>
+<li><b>Flynn effect</b>: average IQ scores rose ~3 points per decade. <b>Stereotype threat</b>: worry about confirming a stereotype lowers performance.</li>
+<li><b>Heritability</b> describes variation in a group, not one person; environment still matters.</li>
+</ul>
+
+<h2>Short answer tips</h2>
+<ul>
+<li>Answer every part; each definition / example / explanation is usually 1 mark.</li>
+<li>Give a definition AND an example when asked for both. Label all graph axes.</li>
+<li>Pick the 3 of 4 questions you know best.</li>
+</ul>
+</div>
+
+<div class="page" id="p2">
+<h1>PSYC 105 Midterm Cheat Sheet (Back)</h1>
+
+<h2>Ch 11: 3 ways to define/measure stress</h2>
+<h3>1. Stress as a STIMULUS (stressors = things that stress us out)</h3>
+<ul>
+<li><b>Social Readjustment Rating Scale (SRRS)</b>: 43 major life events (yes/no), each with points (life change units). Death of spouse 100, divorce 73, marital separation 65, jail term 63, death of close family member 63, personal injury/illness 53, marriage 50, fired at work 47, marital reconciliation 45, retirement 45, change in health of family member 44, pregnancy 40, death of close friend 37, begin or end school 26, change in residence 20, vacation 13, Christmas 12, minor violations of the law 11.</li>
+<li>Positive events (marriage, vacation) count too: any <b>change</b> requires readjustment.</li>
+<li><b>Daily Hassles Scale</b>: everyday annoyances rated 0 / 5 / 10: missing the bus, conflicts between job and college, library too noisy, housemate too noisy, preparing meals, too little time, too little money, deciding what to wear, laundry, materials unavailable in library, getting up in the morning, my weight, not enough time to exercise, noisy neighbours.</li>
+<li><b>Major issue</b>: measuring the events that happen to people doesn't tell us how stressed they <b>felt</b> about them.</li>
+</ul>
+
+<h3>2. Stress as a RESPONSE (how we react)</h3>
+<ul>
+<li>4 parts: <b>thoughts</b> (worry, racing mind), <b>feelings</b> (anxious, irritable), <b>behaviours</b> (e.g., procrastinating), <b>physical sensations</b> (pounding heart).</li>
+<li>Stress <b>mobilizes energy</b> for <b>fight or flight</b> (sympathetic nervous system).</li>
+<li>Measures (physiological): <b>heart rate</b> (watch, finger clip), <b>blood pressure</b> (cuff), <b>galvanic skin response</b> (finger electrodes, sweat/skin conductance), <b>hormones (cortisol)</b> from blood or saliva.</li>
+<li><b>Major issue</b>: physical changes could be caused by things <b>other than stress</b> (e.g., excitement); they don't show how the person is <b>interpreting</b> those sensations.</li>
+</ul>
+
+<h3>3. Stress as a TRANSACTION</h3>
+<ul>
+<li><b>Stimulus + Appraisal = Response</b>: event + "how well can I handle it?" = how stressed you feel.</li>
+<li>Stress = <b>too many demands, too few resources</b> (seesaw). Ex: demands = many assignments; resources = very little time; result = STRESS.</li>
+<li>Fixes the earlier problems: it includes the person's own <b>appraisal</b>.</li>
+<li>Measure: <b>Perceived Stress Scale (PSS)</b>: 10 items, feelings and thoughts in the <b>last month</b>, rated 0 never, 1 almost never, 2 sometimes, 3 fairly often, 4 very often. How often have you: (1) been upset because something happened unexpectedly; (2) felt unable to control the important things in your life; (3) felt nervous and "stressed"; (4) felt confident about your ability to handle personal problems; (5) felt things were going your way; (6) found you could not cope with all the things you had to do; (7) been able to control irritations in your life; (8) felt you were on top of things; (9) been angered by things outside your control; (10) felt difficulties were piling up so high you could not overcome them. Items 4, 5, 7, 8 are positively worded (reverse scored).</li>
+</ul>
+<p><b>Summary</b>: Stimulus = SRRS, Daily Hassles (issue: no feelings). Response = HR, BP, GSR, cortisol (issue: not specific to stress, no interpretation). Transaction = PSS (stimulus + appraisal).</p>
+
+<h2>Ch 11: Appraisal (ex: car breaks down)</h2>
+<ul>
+<li><b>EVENT</b> leads to <b>Primary appraisal</b>: Is this situation a <b>threat</b>? What are the <b>demands</b>? If no: carry on, no stress. If yes: go to secondary appraisal.</li>
+<li><b>Secondary appraisal</b>: <b>How well</b> can I cope? What are my <b>resources</b> (time, money, skills, support)? Minimal resources = <b>STRESS</b>. Many resources = <b>less stress</b>, then choose coping.</li>
+</ul>
+
+<h2>Ch 11: Ways of coping</h2>
+<ul>
+<li><b>1. Problem-focused</b>: change the <b>SITUATION</b>. Ex: call a tow truck; ask coworker to cover shift; make a to-do list; ask family to help move; look over notes before quiz.</li>
+<li><b>2. Emotion-focused</b>: change your <b>REACTION</b>. Ex: deep breathing, change your focus, <b>cognitive reappraisal</b> (think about it differently: "it's only 5%", "my friend will understand", "the new job is exciting").</li>
+<li><b>3. Proactive</b>: act <b>in advance</b> to <b>PREVENT</b> future stressors. Ex: regular car maintenance; put quiz dates in calendar on day 1; start cheat sheet a week early; cloud backups.</li>
+<li>Can't change the situation: emotion-focused helps right now. Want a different outcome: need problem-focused. Big/complex stressors: need <b>both</b>.</li>
+</ul>
+
+<h2>Ch 11: Class scenarios (answer key)</h2>
+<p><b>#1 Surprise quiz</b> (scheduled, not in calendar, not studied, worth 5%): <b>daily hassle</b>; ratings 2, 5, 4, 3 (people appraise differently). Problem: quickly look over notes; lie to prof about being sick (changes situation, bad idea). Emotion: relax, it's not worth much. Proactive: prevent next time (calendar). Could be either, but you <b>can't change the quiz</b>, so <b>emotion-focused</b> helps most now.</p>
+<p><b>#2 Best friend's party vs work shift</b> (need rent money): <b>daily hassle</b>; ratings 3, 1, 4, 3. Problem: find someone to cover; get the party moved. Emotion: realize your friend will understand. If you really want to go, <b>problem-focused</b> is necessary.</p>
+<p><b>#3 New job in new city in 3 weeks</b> (move, clothes, loose ends): <b>major life event (or two!)</b>; ratings 4, 5, 4, 3. Problem: make a list and prioritize; ask friends/family to help move; get enough sleep and good food. Emotion: focus on the great opportunity and how exciting it is. Need <b>both</b>.</p>
+
+<h2>Ch 11: Individual differences</h2>
+<ul>
+<li>People <b>perceive different amounts of stress</b> for the same situation (see the different ratings above).</li>
+<li>Affects wellbeing: some feel better at exam time, or feel <b>excited</b> rather than terrified by big life changes.</li>
+<li>To reduce stress: emotion-focused (think of the situation differently) + <b>proactive</b> (organized, prepared, so you're <b>ready</b> for more).</li>
+<li><b>Downside of low stress</b>: stress helps us <b>focus</b> on important events/tasks; without it you might not <b>change or improve</b>.</li>
+</ul>
+
+<h2>Ch 11: Diaphragmatic breathing</h2>
+<ul>
+<li>Activates the <b>parasympathetic nervous system</b> (rest and calm) via the <b>vagus nerve</b>. It is <b>emotion-focused</b> (changes your reaction).</li>
+<li>How: (1) sit, both feet flat; (2) one hand on chest, one on belly below ribs (diaphragm); (3) <b>inhale for 3</b>, belly extends, chest and shoulders still; (4) <b>exhale for 5</b>, slow steady stream, push all air out; (5) focus on breathing, not stressful thoughts.</li>
+</ul>
+
+<h2>Practice SA: 3 approaches to stress (5)</h2>
+<ul>
+<li>(1) Stimulus: stress = event; SRRS or Daily Hassles. (1) Response: stress = reaction; heart rate, BP, GSR, cortisol. (1) Transaction: stimulus + appraisal; PSS.</li>
+<li>(1) Stimulus limit: doesn't show how stressed people felt. (1) Response limit: could be excitement, no interpretation.</li>
+</ul>
+
+<h2>Practice SA: Laptop crashes night before paper (5)</h2>
+<ul>
+<li>(1) Primary: is it a threat? Yes, paper due, file may be lost (demands). (1) Secondary: can I cope? Backup copy, library computer, understanding prof (resources); few resources = more stress.</li>
+<li>(1) Problem: use library computer, recover file, ask for extension. (1) Emotion: deep breathing, "one paper won't decide my degree". (1) Proactive: set up cloud backups, start papers earlier.</li>
+</ul>
+
+<h2>Textbook extras: Ch 11 (not on slides; check study guide)</h2>
+<ul>
+<li><b>Lazarus and Folkman</b> = transactional model / appraisal. <b>Holmes and Rahe</b> = SRRS (300+ life change units in a year = high illness risk). <b>Cohen</b> = PSS.</li>
+<li><b>Selye's General Adaptation Syndrome</b>: <b>alarm</b> (fight or flight kicks in), <b>resistance</b> (body copes, stays aroused), <b>exhaustion</b> (resources depleted, illness more likely).</li>
+<li><b>SAM pathway</b> (fast): sympathetic nervous system, adrenal medulla, adrenaline/noradrenaline. <b>HPA axis</b> (slower): hypothalamus, pituitary (ACTH), adrenal cortex, <b>cortisol</b>.</li>
+<li><b>Tend and befriend</b> (Taylor): response of nurturing and seeking social support, especially in women.</li>
+<li><b>Acute</b> stress = short-term; <b>chronic</b> = long-term, harms health. <b>Eustress</b> = positive stress; <b>distress</b> = negative.</li>
+<li><b>Yerkes-Dodson law</b>: moderate arousal = best performance; too little or too much hurts (links to "downside of low stress").</li>
+<li><b>Psychoneuroimmunology</b>: chronic stress suppresses the immune system (slower healing, more colds).</li>
+<li><b>Type A</b> (competitive, impatient, <b>hostile</b>; hostility linked to heart disease) vs <b>Type B</b> (relaxed).</li>
+<li><b>Hardiness</b>: commitment, control, challenge. <b>Optimism</b>, <b>perceived control</b> and <b>social support</b> buffer stress.</li>
+<li>Other coping: <b>avoidance</b> (helps short-term, hurts long-term), <b>rumination</b> (dwelling, increases stress), exercise, sleep, mindfulness/meditation, humour.</li>
+</ul>
+
+<h2>Quick MC traps</h2>
+<ul>
+<li>Sounds = phoneme; meaning = morpheme; word order = syntax; tone/face/context = extralinguistic.</li>
+<li>Digit Span/Arithmetic = Working Memory (not Speed). Coding/Symbol Search = Processing Speed. Block Design/Matrix = Perceptual.</li>
+<li>SRRS + Daily Hassles = stimulus. HR/BP/GSR/cortisol = response. PSS = transaction.</li>
+<li>"Is it a threat?" = primary. "Can I cope?" = secondary.</li>
+<li>Tow truck = problem. Reappraisal/breathing = emotion. Maintenance/calendar ahead of time = proactive.</li>
+<li>Parasympathetic = calming (breathing). Sympathetic = fight or flight.</li>
+<li>Missing the bus = daily hassle. Moving cities/new job = major life event.</li>
+</ul>
+</div>
+
+</div>
+</div>
+
+<script>
+(function () {
+  var sheet = document.getElementById("sheet"), status = document.getElementById("status");
+  function selectSheet() {
+    var r = document.createRange(); r.selectNodeContents(sheet);
+    var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+  }
+  function docsHtml() {
+    var c = sheet.cloneNode(true);
+    c.querySelectorAll("h1,h2,h3").forEach(function (h) {
+      var p = document.createElement("p");
+      p.innerHTML = "<b>" + h.innerHTML + "</b>";
+      if (h.tagName === "H2") p.innerHTML = "<b>" + h.textContent.toUpperCase() + "</b>";
+      h.replaceWith(p);
+    });
+    c.querySelectorAll("p,li").forEach(function (e) { e.setAttribute("style", "margin:0;line-height:1.1;font-size:8pt;font-family:Arial;color:#000000"); });
+    c.querySelectorAll("ul").forEach(function (e) { e.setAttribute("style", "margin:0;padding-left:12pt"); });
+    return '<div style="font-family:Arial;font-size:8pt;color:#000000">' + c.innerHTML + "</div>";
+  }
+  document.getElementById("copy-btn").addEventListener("click", function () {
+    var html = docsHtml(), text = sheet.innerText;
+    var done = function () { status.textContent = "Copied. Paste it into a Google Doc, then follow the steps below."; };
+    var fallback = function () { selectSheet(); status.textContent = "Your browser blocked the copy button. The text is now selected: press Ctrl+C (Cmd+C on Mac) to copy it."; };
+    try {
+      if (window.ClipboardItem && navigator.clipboard && navigator.clipboard.write) {
+        navigator.clipboard.write([new ClipboardItem({
+          "text/html": new Blob([html], { type: "text/html" }),
+          "text/plain": new Blob([text], { type: "text/plain" })
+        })]).then(done, fallback);
+      } else if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(function () { status.textContent = "Copied as plain text (bold not kept). Use Select all text and Ctrl+C to keep bold."; }, fallback);
+      } else { fallback(); }
+    } catch (e) { fallback(); }
+  });
+  document.getElementById("select-btn").addEventListener("click", function () {
+    selectSheet(); status.textContent = "Selected. Press Ctrl+C (Cmd+C on Mac) to copy.";
+  });
+})();
+</script>
